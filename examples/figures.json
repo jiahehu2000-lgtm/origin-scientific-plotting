@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "figures": [
+    {
+      "id": "01_response",
+      "kind": "xy",
+      "caption": "Synthetic decay response. Demonstration data only; no experimental claims.",
+      "xaxis": {"label": "Time (s)", "limits": [0, 2], "increment": 0.5, "decimals": 1},
+      "yaxis": {"label": "Response (a.u.)", "limits": [0, 1.1], "increment": 0.2, "decimals": 1},
+      "series": [
+        {"kind": "scatter", "label": "Example samples", "csv": {"path": "response.csv", "x": "time_s", "y": "response"}, "color": "#6699CC", "marker_size_pt": 4},
+        {"kind": "line", "label": "Reference curve", "csv": {"path": "response.csv", "x": "time_s", "y": "reference"}, "color": "#F14040"}
+      ],
+      "legend": {"x": 1.28, "y": 0.94},
+      "annotations": [{"text": "Synthetic example", "x": 1.28, "y": 0.65}]
+    },
+    {
+      "id": "02_errorbars",
+      "kind": "xy",
+      "caption": "Synthetic values with supplied symmetric error magnitudes. No uncertainty is inferred by the plotting tool.",
+      "xaxis": {"label": "Input", "limits": [0, 5], "increment": 1, "decimals": 0},
+      "yaxis": {"label": "Response (a.u.)", "limits": [0, 1], "increment": 0.2, "decimals": 1},
+      "series": [{"kind": "errorbar", "label": "Supplied mean and error", "x": [1, 2, 3, 4], "y": [0.3, 0.5, 0.65, 0.8], "yerr": [0.05, 0.07, 0.04, 0.06]}],
+      "legend": {"x": 2.65, "y": 0.23}
+    },
+    {
+      "id": "03_columns",
+      "kind": "xy",
+      "caption": "Synthetic comparison, not a benchmark or measured accuracy.",
+      "xaxis": {"label": "Condition", "limits": [0.5, 3.5], "increment": 1, "labels": ["A", "B", "C"]},
+      "yaxis": {"label": "Score (a.u.)", "limits": [0, 1], "increment": 0.2, "decimals": 1},
+      "series": [{"kind": "bar", "x": [1, 2, 3], "y": [0.72, 0.84, 0.79], "color": "#6699CC", "bar_width": 0.6}]
+    },
+    {
+      "id": "04_confusion",
+      "kind": "heatmap",
+      "page_inches": [5.8, 5.2],
+      "font_size_pt": 16,
+      "caption": "Synthetic count matrix, explicitly normalized by row. Class 4 has no observations and is missing rather than zero.",
+      "matrix": {
+        "values": [[9, 1, 0, 0], [0, 8, 2, 0], [1, 0, 9, 0], [0, 0, 0, 0]],
+        "normalization": "row",
+        "digits": 2,
+        "colorbar_label": "Proportion",
+        "missing_row_label": "Not tested"
+      }
+    }
+  ]
+}

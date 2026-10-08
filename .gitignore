@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+_testing/
+_build/
+results/
+*.pptx
+*.opju
+*.emf
+*.pdf
+*.svg
+*_verification/
+.env
+.env.*

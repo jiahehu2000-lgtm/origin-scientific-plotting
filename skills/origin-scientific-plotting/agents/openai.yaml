@@ -1,0 +1,6 @@
+interface:
+  display_name: "Origin Scientific Plotting"
+  short_description: "Native Origin figures, vector exports, and editable PPT graphs"
+  default_prompt: "Use $origin-scientific-plotting to plot my scientific data in Origin, verify the embedded values, and export editable projects and vector figures."
+policy:
+  allow_implicit_invocation: true
