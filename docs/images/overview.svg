@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="360" viewBox="0 0 1400 360" role="img" aria-labelledby="title desc">
+  <title id="title">Origin Scientific Plotting</title>
+  <desc id="desc">流程示意：科研数据与参考图，经 Codex 调用本机 Origin，生成可编辑工程、矢量图和 Origin OLE PowerPoint。</desc>
+  <rect width="1400" height="360" rx="24" fill="#0c1c33"/>
+  <g font-family="Segoe UI,Microsoft YaHei,Noto Sans CJK SC,sans-serif">
+    <text x="54" y="72" fill="#76d9ef" font-size="20" letter-spacing="3">DATA → ORIGIN → EDITABLE FIGURES</text>
+    <text x="54" y="126" fill="#ffffff" font-size="38" font-weight="700">把数据画成图，也把编辑能力留下来。</text>
+    <text x="54" y="161" fill="#b4c4db" font-size="22">Windows 本机 Origin · 可配置版式 · 中文使用指南</text>
+    <g transform="translate(54,201)">
+      <rect width="300" height="108" rx="14" fill="#142c49" stroke="#2a4968"/>
+      <text x="22" y="41" fill="#ffffff" font-size="24" font-weight="600">01  数据 + 参考图</text>
+      <text x="22" y="77" fill="#c0d0e4" font-size="19">曲线 / 误差棒 / 柱状 / 矩阵</text>
+    </g>
+    <path d="M 373 253 H 401 M 391 244 L 403 253 L 391 262" fill="none" stroke="#76d9ef" stroke-width="3"/>
+    <g transform="translate(424,201)">
+      <rect width="300" height="108" rx="14" fill="#142c49" stroke="#2a4968"/>
+      <text x="22" y="41" fill="#ffffff" font-size="24" font-weight="600">02  Codex 调用 Origin</text>
+      <text x="22" y="77" fill="#c0d0e4" font-size="19">原生绘图 · 保存 · 核验</text>
+    </g>
+    <path d="M 743 253 H 771 M 761 244 L 773 253 L 761 262" fill="none" stroke="#76d9ef" stroke-width="3"/>
+    <g transform="translate(794,201)">
+      <rect width="550" height="108" rx="14" fill="#123a4a" stroke="#398c9b"/>
+      <text x="22" y="41" fill="#ffffff" font-size="24" font-weight="600">03  OPJU + 矢量图 + 可编辑 PPT</text>
+      <text x="22" y="77" fill="#c1e9ed" font-size="19">PPT 中双击 Origin OLE 对象，继续编辑</text>
+    </g>
+  </g>
+</svg>

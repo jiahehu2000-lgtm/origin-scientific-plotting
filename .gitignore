@@ -9,6 +9,7 @@ results/
 *.emf
 *.pdf
 *.svg
+!docs/images/overview.svg
 *_verification/
 .env
 .env.*

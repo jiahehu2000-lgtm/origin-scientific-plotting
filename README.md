@@ -1,127 +1,125 @@
-# Origin Scientific Plotting
+# Origin Scientific Plotting｜让 Codex 调用 Origin 画科研图
 
-A reusable **Codex skill for scientific plotting through the installed Origin application on Windows**. It creates native editable `.opju` projects, exports vector figures, checks saved numbers and typography, and can embed graphs in PowerPoint as editable Origin OLE objects.
+[![检查状态](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/actions/workflows/validate.yml/badge.svg)](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/actions/workflows/validate.yml)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Windows + Origin](https://img.shields.io/badge/Windows-Origin%20COM-0078D4)](#使用条件)
+[![GitHub stars](https://img.shields.io/github/stars/jiahehu2000-lgtm/origin-scientific-plotting?style=social)](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/stargazers)
 
-**中文说明见下方。** All bundled data are synthetic demonstrations. No private research data, fitted device parameters, or proprietary Origin software are included.
+**把科研数据交给 Codex，用本机 Origin 绘图，拿到可编辑工程、矢量图，以及能双击回 Origin 的 PPT。**
 
-## What it does
+![从数据到可编辑 Origin 工程和 PowerPoint 的流程示意](docs/images/overview.svg)
 
-- Native Origin line, scatter, symmetric error-bar, column, and annotated heatmap plots.
-- Explicit row normalization for confusion matrices, preserving original counts and missing/untested rows.
-- Native `.opju`, `.png`, `.pdf`, `.emf` exports; `.svg` converted from Origin's vector PDF.
-- Compact native pages, configurable fonts/frame dimensions, and saved-project numerical/layout verification.
-- Optional PowerPoint output with embedded Origin graphs, locked aspect ratios, configurable placement width, and captions.
+[中文使用指南](docs/中文使用指南.md) · [English](README.en.md) · [下载 Skill](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/releases/latest) · [真实验证范围](docs/VALIDATION.md)
 
-The code draws supplied data. It does not fit, smooth, select observations, train classifiers, or create scientific measurements. Visual inspection remains required after automated checks.
+如果这个工具能帮你整理论文图，欢迎点一个 **⭐ Star**，方便下次找到。使用问题和参考图适配需求可以提交 [Issue](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/issues)。
 
-## Requirements
+## 先看实际输出
 
-- Windows with installed, licensed Origin and working `Origin.Application` COM registration.
-- Python 3.10+ and the packages in the skill's `requirements.txt`.
-- Microsoft PowerPoint desktop is required **only** for editable PPT output.
+下列示例使用仓库中的**合成演示数据，由 Origin 原生绘制并导出**。你的原始数据不会因为绘图被拟合、平滑或筛选。
 
-Basic workflows were exercised with OriginPro 2021 (internal version 9.8002) on Windows. Compatibility with other versions, fonts, locales, and complex graph types must be checked in the target environment. Linux/macOS can validate specifications but cannot run native Origin COM plotting. See [validation scope](docs/VALIDATION.md).
+<table>
+  <tr>
+    <td width="50%"><img src="docs/images/response.png" alt="Origin 原生曲线和散点演示" width="100%" /></td>
+    <td width="50%"><img src="docs/images/confusion.png" alt="Origin 行归一化混淆矩阵演示，每格标注数值，未测试行显示为缺失" width="100%" /></td>
+  </tr>
+  <tr>
+    <td align="center">曲线 / 散点：统一字体、图框与图例</td>
+    <td align="center">混淆矩阵：每格标值，保留未测试状态</td>
+  </tr>
+</table>
 
-## Install in Codex
+| 你需要什么 | 可以得到什么 |
+|---|---|
+| 后面还要改图 | 原生 `.opju` 工程，包含绘图数据与图形 |
+| 放进论文或排版软件 | Origin 导出的 PDF、EMF 矢量图与 PNG 预览；SVG 由矢量 PDF 转换 |
+| 放进组会 PPT 后继续编辑 | 嵌入式 Origin OLE 对象，设定宽度并锁定比例；双击调用 Origin 编辑 |
+| 多张图风格统一 | 可配置字体、字号、图框尺寸、颜色和页边距，并核验保存后的设置 |
 
-Ask Codex, with the skill installer available:
+已提供曲线、散点、**对称误差棒**、柱状图及带数值标注的热图。复杂多层图、组合图和特殊图型需进一步适配，详见[验证范围](docs/VALIDATION.md)。
 
-> Install the skill from https://github.com/jiahehu2000-lgtm/origin-scientific-plotting, path `skills/origin-scientific-plotting`.
+## 三步开始
 
-Or clone and copy the **skill folder**, not the entire repository:
+### 1. 准备环境
 
-```powershell
-git clone https://github.com/jiahehu2000-lgtm/origin-scientific-plotting.git
-$originSkill = Join-Path $HOME '.codex/skills/origin-scientific-plotting'
-if (Test-Path -LiteralPath $originSkill) { throw 'Skill already exists; inspect it before replacing.' }
-New-Item -ItemType Directory -Path (Split-Path -Parent $originSkill) -Force | Out-Null
-Copy-Item -LiteralPath './origin-scientific-plotting/skills/origin-scientific-plotting' -Destination $originSkill -Recurse
-```
+- Windows，本机已安装且具有可用许可的 Origin，能够调用 `Origin.Application` COM。
+- Python 3.10+，安装 Skill 的 Python 依赖。
+- 需要可编辑 PPT 时，再准备 Microsoft PowerPoint 桌面版。
 
-Start a new Codex conversation if the skill does not appear in the current session. Then invoke:
+### 2. 安装 Skill
 
-Alternatively, download the skill ZIP from [Releases](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/releases/latest), extract it, and place the included `origin-scientific-plotting` folder under `~/.codex/skills/`. Dependencies still need to be installed. Use the full repository to obtain the runnable synthetic examples.
+在有 Skill 安装功能的 Codex 中发送：
 
-> Use `$origin-scientific-plotting` to plot this CSV in Origin. Match my reference figure, export an editable OPJU and vector PDF, and check the final layout.
+> 从 https://github.com/jiahehu2000-lgtm/origin-scientific-plotting 安装 Skill，路径是 `skills/origin-scientific-plotting`。
 
-For editable PPT:
+也可从 [Releases](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/releases/latest) 下载 ZIP，将其中的 `origin-scientific-plotting` 文件夹放到 `~/.codex/skills/`。依赖仍需安装；完整步骤见[中文指南](docs/中文使用指南.md)。
 
-> Use `$origin-scientific-plotting` to put these Origin graphs into PowerPoint as embedded objects that open Origin when double-clicked. Set the graph width to 5 cm, lock aspect ratios, and add Chinese captions.
+### 3. 给数据和要求
 
-## Run the examples without Codex
+> 使用 `$origin-scientific-plotting`，调用 Origin 绘制这个 CSV。X 轴是时间，Y 轴是电流。参考我附的图片统一字体字号和边框，缩小多余白边，导出可编辑 OPJU、PDF 和 EMF，并检查文字有没有重叠或裁切。
 
-From the repository root, use a virtual environment:
+要做可编辑 PPT，可以接着说：
+
+> 把这些 Origin 图作为嵌入对象放到 PPT，要求双击能打开 Origin；每张宽度 5 cm，锁定长宽比例，添加中文说明。
+
+## 不用 Codex，也能直接运行
+
+克隆仓库后，在仓库根目录运行：
 
 ```powershell
 python -m venv .venv
 & ./.venv/Scripts/python.exe -m pip install -r skills/origin-scientific-plotting/requirements.txt
+
+# 检查本机环境，以及演示数据的格式
 & ./.venv/Scripts/python.exe skills/origin-scientific-plotting/scripts/origin_plot.py --doctor
 & ./.venv/Scripts/python.exe skills/origin-scientific-plotting/scripts/origin_plot.py --spec examples/figures.json --validate-only
+
+# 调用 Origin，生成四张演示图及原生工程
 & ./.venv/Scripts/python.exe skills/origin-scientific-plotting/scripts/origin_plot.py --spec examples/figures.json --output results
+
+# 可选：把图嵌入 PPT，每张宽度 5 cm
 & ./.venv/Scripts/python.exe skills/origin-scientific-plotting/scripts/origin_to_ppt.py --manifest results/manifest.json --output example_figures.pptx --width-cm 5
 ```
 
-`results` must be new or empty; an existing PPTX is never overwritten. To append to a copy of a deck, add `--template existing.pptx` and select a new output filename. The PowerPoint helper uses the Windows clipboard while embedding graphs; avoid copying other content during that short operation.
+`results` 必须是新目录或空目录；已有 PPTX 不会被覆盖。需要添加到原有 PPT 时，用 `--template existing.pptx` 并指定新的输出文件名。嵌入过程中会短暂使用 Windows 剪贴板。
 
-Edit [examples/figures.json](examples/figures.json) for your own data. Read the [specification reference](skills/origin-scientific-plotting/references/figure-spec.md), [native Origin workflow](skills/origin-scientific-plotting/references/origin-workflow.md), and [editable PPT workflow](skills/origin-scientific-plotting/references/powerpoint-ole.md) for limits and implementation details.
+自己的数据从 [examples/figures.json](examples/figures.json) 改起。各字段、表格列名及矩阵格式见[绘图规格](skills/origin-scientific-plotting/references/figure-spec.md)。
 
-## Output structure
+## 输出里面有什么
 
 ```text
 results/
-  manifest.json                 Complete only when every figure passes
-  origin_commands.json          Executed native commands
+  manifest.json              批次状态、导出文件及核验信息
+  origin_commands.json       执行过的 Origin 指令
   01_response/
-    01_response.opju            Editable Origin project with numerical data
-    01_response.png
-    01_response.pdf
-    01_response.emf
-    01_response.svg             Derived from the Origin PDF
-    Data001.csv                 Numerical table used by the native graph
-    frozen_spec.json
-    verification.json
-  04_confusion/
-    original_matrix.csv         Original supplied counts
-    Matrix01.csv                Normalized displayed values, missing cells blank
-    ...
+    01_response.opju         可编辑工程
+    01_response.pdf / .emf   Origin 矢量导出
+    01_response.svg          从 Origin PDF 转换
+    01_response.png          预览
+    Data001.csv              实际绘图数据
+    frozen_spec.json         本次绘图设置
+    verification.json        数据与版式核验
 ```
 
-Failure reports preserve diagnostics and do not become a complete manifest. Reports contain source paths/hashes; review them before publishing your outputs. An `interactive_editing_tested: false` result means structural OLE checks passed but the helper did not test opening the embedded editor.
+混淆矩阵还保存原始计数和显示矩阵。归一化须明确开启；未测试行保留为缺失。核验记录会包含来源路径和哈希，分享结果前请自行查看。
 
-## Preview
+## 使用条件
 
-These previews are created in Origin from the bundled synthetic data.
+本地验证使用 OriginPro 2021 和 PowerPoint 16.0；其他版本、字体和复杂图型需要在你的环境中确认。GitHub 自动检查验证的是规格、元数据与可移植逻辑，**不会在云端运行 Origin 或 Office**。
 
-![Synthetic response example](docs/images/response.png)
+自动核验后仍需要查看最终尺寸下的图片。`interactive_editing_tested: false` 表示嵌入对象结构已检查，但脚本没有自动双击测试编辑器。详细证据见 [VALIDATION.md](docs/VALIDATION.md)。
 
-![Synthetic normalized confusion matrix with an untested row](docs/images/confusion.png)
+## 相关开源项目
 
-## Development checks
+[PhotoSynapse-RC](https://github.com/jiahehu2000-lgtm/photo-synapse-rc)：器件模型驱动的储备池计算，提供中文图解、光暗模型和可复现分类流程。两个仓库可分别使用；RC 结果需要按绘图规格准备后交给本工具绘制。
 
-```powershell
+## 参与与许可
+
+欢迎提交脱敏的小数据样例、报错信息或希望适配的图型。开发检查：
+
+```text
 python -m pip install -r requirements-dev.txt
 python -m unittest discover -s tests -v
 python scripts/validate_skill.py
 ```
 
-GitHub Actions runs portable metadata/specification tests. Native Origin and Office tests require a licensed Windows desktop and are not run on hosted CI. [Validation scope](docs/VALIDATION.md) distinguishes the two.
-
-## 中文使用说明
-
-这是一个通过 **Windows 本机 Origin** 进行科研绘图的 Codex skill。可以绘制曲线、散点、误差棒、柱状图和带数值标注的混淆矩阵，并导出可编辑 Origin 工程、PDF/EMF 矢量图。SVG 由 Origin 导出的 PDF 转换而来。
-
-安装方式：把仓库内 `skills/origin-scientific-plotting` 整个文件夹放到 `~/.codex/skills/`，然后在新会话中使用 `$origin-scientific-plotting`。Python 依赖按上面的命令安装，Origin 需自行安装并持有可用许可。
-
-也可以从 [Releases](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/releases/latest) 下载 skill ZIP，解压后将同名文件夹放到上述目录。完整可运行示例在本仓库中。
-
-示例指令：
-
-> 使用 `$origin-scientific-plotting`，调用 Origin 绘制这些科研数据，参考我提供的图片统一字体字号、边框和比例，去掉多余白边，导出 OPJU、PDF 和 EMF。
-
-> 使用 `$origin-scientific-plotting`，把这些图作为可双击打开 Origin 的嵌入对象放入 PPT，宽度设为 5 cm，锁定长宽比例，添加中文备注。
-
-字号、颜色、图框和 PPT 宽度均可配置。默认设置是演示值，不是通用期刊标准。绘图脚本保留原始数值；混淆矩阵归一化需明确开启，未测试行显示为缺失。自动核验后仍需查看图片，确认最终尺寸下没有文字重叠或裁切。
-
-## License
-
-MIT for this repository's code and skill content. Origin and Microsoft Office are separately licensed products. This project is independent and is not an official OriginLab or OpenAI product.
+本仓库代码与 Skill 内容使用 [MIT 许可](LICENSE)。Origin 和 Microsoft Office 是需另行许可的软件；本项目由作者独立维护。
