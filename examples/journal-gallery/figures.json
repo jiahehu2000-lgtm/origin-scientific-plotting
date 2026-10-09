@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "figures": [
+    {
+      "id": "01_time_response", "kind": "xy",
+      "page_inches": [3.5, 2.7], "font_family": "Arial", "font_size_pt": 7,
+      "axis_width_pt": 1, "dpi": 600,
+      "caption": "Synthetic demonstration: samples as markers and a supplied reference as a line. No model fitting or experimental claim. Initial canvas 88.9 mm; final compacted size must be read from the exported PDF.",
+      "xaxis": {"label": "Time (s)", "limits": [0, 2], "increment": 0.5, "decimals": 1},
+      "yaxis": {"label": "Response (a.u.)", "limits": [0, 1.1], "increment": 0.2, "decimals": 1},
+      "series": [
+        {"kind": "scatter", "label": "Samples", "x": [0, 0.1, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.5, 2], "y": [0.94, 0.72, 0.52, 0.30, 0.20, 0.13, 0.10, 0.07, 0.05, 0.025], "color": "#0072B2", "marker": "circle", "marker_size_pt": 3},
+        {"kind": "line", "label": "Reference", "x": [0, 0.1, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.5, 2], "y": [0.96, 0.70, 0.53, 0.31, 0.19, 0.135, 0.095, 0.072, 0.045, 0.027], "color": "#333333", "dash": "dash", "line_width_pt": 1}
+      ],
+      "legend": {"x": 1.05, "y": 0.96},
+      "annotations": [{"text": "Synthetic", "x": 1.05, "y": 0.68}]
+    },
+    {
+      "id": "02_individual_points", "kind": "xy",
+      "page_inches": [3.5, 2.7], "font_family": "Arial", "font_size_pt": 7,
+      "axis_width_pt": 1, "dpi": 600,
+      "caption": "Synthetic independent groups, six observations each. Horizontal offsets are explicit display positions; supplied responses are unchanged. No mean, error bar or statistical test is inferred.",
+      "xaxis": {"label": "Condition", "limits": [0.5, 3.5], "increment": 1, "labels": ["A", "B", "C"]},
+      "yaxis": {"label": "Response (a.u.)", "limits": [0, 1.2], "increment": 0.3, "decimals": 1},
+      "series": [
+        {"kind": "scatter", "x": [0.93, 0.97, 1.01, 1.05, 0.95, 1.03], "y": [0.38, 0.47, 0.41, 0.58, 0.52, 0.43], "color": "#0072B2", "marker": "circle", "marker_size_pt": 3.5},
+        {"kind": "scatter", "x": [1.93, 1.97, 2.01, 2.05, 1.95, 2.03], "y": [0.55, 0.69, 0.73, 0.61, 0.82, 0.65], "color": "#D55E00", "marker": "square", "marker_size_pt": 3.5},
+        {"kind": "scatter", "x": [2.93, 2.97, 3.01, 3.05, 2.95, 3.03], "y": [0.72, 0.90, 0.78, 1.05, 0.85, 0.95], "color": "#009E73", "marker": "triangle", "marker_size_pt": 3.5}
+      ],
+      "annotations": [{"text": "Synthetic; n = 6/group", "x": 1.55, "y": 1.12}]
+    },
+    {
+      "id": "03_paired_observations", "kind": "xy",
+      "page_inches": [3.5, 2.7], "font_family": "Arial", "font_size_pt": 7,
+      "axis_width_pt": 1, "dpi": 600,
+      "caption": "Synthetic paired observations: each gray segment connects the same observation before and after. Six pairs, not twelve independent observations. No statistical inference is performed.",
+      "xaxis": {"label": "Condition", "limits": [0.5, 2.5], "increment": 1, "labels": ["Before", "After"]},
+      "yaxis": {"label": "Response (a.u.)", "limits": [0, 1.2], "increment": 0.3, "decimals": 1},
+      "series": [
+        {"kind": "line", "x": [1, 2], "y": [0.35, 0.60], "color": "#999999", "line_width_pt": 0.75},
+        {"kind": "line", "x": [1, 2], "y": [0.50, 0.75], "color": "#999999", "line_width_pt": 0.75},
+        {"kind": "line", "x": [1, 2], "y": [0.45, 0.70], "color": "#999999", "line_width_pt": 0.75},
+        {"kind": "line", "x": [1, 2], "y": [0.65, 0.85], "color": "#999999", "line_width_pt": 0.75},
+        {"kind": "line", "x": [1, 2], "y": [0.72, 0.68], "color": "#999999", "line_width_pt": 0.75},
+        {"kind": "line", "x": [1, 2], "y": [0.80, 1.02], "color": "#999999", "line_width_pt": 0.75},
+        {"kind": "scatter", "x": [1, 1, 1, 1, 1, 1], "y": [0.35, 0.50, 0.45, 0.65, 0.72, 0.80], "color": "#0072B2", "marker": "circle", "marker_size_pt": 3.5},
+        {"kind": "scatter", "x": [2, 2, 2, 2, 2, 2], "y": [0.60, 0.75, 0.70, 0.85, 0.68, 1.02], "color": "#D55E00", "marker": "square", "marker_size_pt": 3.5}
+      ],
+      "annotations": [{"text": "Synthetic; 6 pairs", "x": 1.25, "y": 1.12}]
+    },
+    {
+      "id": "04_confusion_matrix", "kind": "heatmap",
+      "page_inches": [3.5, 3.2], "font_family": "Arial", "font_size_pt": 7,
+      "axis_width_pt": 1, "dpi": 600,
+      "caption": "Synthetic count matrix with explicit row normalization. Rows are true classes, columns predictions. Class 5 is untested and missing, not a measured zero. Blue is a sequential scale; normalization is not a statistical test.",
+      "matrix": {
+        "values": [[48, 2, 0, 0, 0], [1, 45, 4, 0, 0], [0, 2, 46, 2, 0], [0, 0, 3, 47, 0], [null, null, null, null, null]],
+        "normalization": "row", "digits": 2, "annotate": true,
+        "colorbar_label": "Proportion", "missing_row_label": "Not tested",
+        "low_color": "#F7FBFF", "high_color": "#08306B", "missing_color": "#ECECEC"
+      }
+    }
+  ]
+}

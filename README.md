@@ -9,7 +9,7 @@
 
 ![从数据到可编辑 Origin 工程和 PowerPoint 的流程示意](docs/images/overview.svg)
 
-[中文使用指南](docs/中文使用指南.md) · [English](README.en.md) · [下载 Skill](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/releases/latest) · [真实验证范围](docs/VALIDATION.md)
+[中文使用指南](docs/中文使用指南.md) · [Nature / Science / Cell 选图指南](docs/CNS期刊风格与选图指南.md) · [English](README.en.md) · [下载 Skill v0.2.0](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/raw/refs/heads/main/dist/origin-scientific-plotting-skill-v0.2.0.zip) · [真实验证范围](docs/VALIDATION.md)
 
 如果这个工具能帮你整理论文图，欢迎点一个 **⭐ Star**，方便下次找到。使用问题和参考图适配需求可以提交 [Issue](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/issues)。
 
@@ -37,6 +37,16 @@
 
 已提供曲线、散点、**对称误差棒**、柱状图及带数值标注的热图。复杂多层图、组合图和特殊图型需进一步适配，详见[验证范围](docs/VALIDATION.md)。
 
+## 新增：Nature / Science / Cell 科研选图指南
+
+**什么数据画什么图？怎样统一字号，又避免把“期刊风格”误当官方要求？**
+
+[中文指南](docs/CNS期刊风格与选图指南.md)整理了官方来源核验、按数据关系选图的决策表、最终宽度与字号换算，以及 Origin 的实际操作边界。Nature、Nature Communications、Science 和 Science Advances 分开列出；Cell 当前官方页面未能读取，未知参数及官方来源冲突均保留。资料核验于 **2026-10-09**。
+
+![时间响应、个体点、配对与混淆矩阵的 Origin 原生公开示例](docs/journal-gallery/gallery.png)
+
+四张图全部由 Origin 原生绘制，提供 [PNG / 矢量 PDF / 可编辑 OPJU](docs/journal-gallery/README.md)、[公开合成数据与设置](examples/journal-gallery/figures.json)和核验摘要。它们是选图和排版示例，不是期刊认证模板。新版 Skill 会在请求期刊风格或选图建议时读取这些规则。
+
 ## 三步开始
 
 ### 1. 准备环境
@@ -51,7 +61,7 @@
 
 > 从 https://github.com/jiahehu2000-lgtm/origin-scientific-plotting 安装 Skill，路径是 `skills/origin-scientific-plotting`。
 
-也可从 [Releases](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/releases/latest) 下载 ZIP，将其中的 `origin-scientific-plotting` 文件夹放到 `~/.codex/skills/`。依赖仍需安装；完整步骤见[中文指南](docs/中文使用指南.md)。
+也可直接下载 [v0.2.0 Skill ZIP](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/raw/refs/heads/main/dist/origin-scientific-plotting-skill-v0.2.0.zip)，将其中的 `origin-scientific-plotting` 文件夹放到 `~/.codex/skills/`。依赖仍需安装；完整步骤见[中文指南](docs/中文使用指南.md)，版本说明见 [Releases](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/releases/latest)。
 
 ### 3. 给数据和要求
 

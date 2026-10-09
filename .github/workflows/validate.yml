@@ -16,3 +16,4 @@ jobs:
       - run: python scripts/validate_skill.py
       - run: python -m unittest discover -s tests -v
       - run: python skills/origin-scientific-plotting/scripts/origin_plot.py --spec examples/figures.json --validate-only
+      - run: python skills/origin-scientific-plotting/scripts/origin_plot.py --spec examples/journal-gallery/figures.json --validate-only

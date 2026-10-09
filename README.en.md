@@ -2,9 +2,15 @@
 
 A reusable **Codex skill for scientific plotting through the installed Origin application on Windows**. It creates native editable `.opju` projects, exports vector figures, checks saved numbers and typography, and can embed graphs in PowerPoint as editable Origin OLE objects.
 
-[中文首页](README.md) · [中文使用指南](docs/中文使用指南.md)
+[中文首页](README.md) · [中文使用指南](docs/中文使用指南.md) · [Nature / Science / Cell plotting guide (Chinese)](docs/CNS期刊风格与选图指南.md)
 
 All bundled data are synthetic demonstrations. No private research data, fitted device parameters, or proprietary Origin software are included.
+
+## Journal guidance and a native Origin gallery
+
+The [Chinese guide](docs/CNS期刊风格与选图指南.md) separates exact-journal requirements from practical plot-selection advice, with dated primary-source links, unresolved official-source conflicts, and final-size font calculations. Cell-specific numbers remain unverified rather than being inferred from Elsevier's general artwork guide. These are independent recommendations, not certified journal templates.
+
+The [four native examples](docs/journal-gallery/README.md) include time response, individual observations, paired observations and a normalized confusion matrix with an untested class. Synthetic data/specifications, editable OPJU projects, native vector PDFs and numerical/layout verification summaries are public. The Skill routes journal-style requests to its new `references/journal-style.md` reference. Sources were checked on **2026-10-09**; verify current target-journal instructions when submitting.
 
 ## What it does
 

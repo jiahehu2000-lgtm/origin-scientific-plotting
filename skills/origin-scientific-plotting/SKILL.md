@@ -9,6 +9,7 @@ Use the installed Origin application through COM and LabTalk. Final graphs must 
 
 ## Choose the operation
 
+- **Journal style or choosing a graph type:** read [references/journal-style.md](references/journal-style.md), then the appropriate operation below. Distinguish exact-journal requirements from practical style recommendations; check final placement size and preserve inaccessible or conflicting requirements as unresolved.
 - **New plots or a batch:** read [references/figure-spec.md](references/figure-spec.md). Use `scripts/origin_plot.py` with a JSON specification and a new output directory. The helper supports line, scatter, symmetric error bars, columns, and annotated heatmaps; unsupported graph types should be implemented in Origin rather than approximated silently.
 - **Existing Origin project:** read [references/origin-workflow.md](references/origin-workflow.md). Work on a copy and preserve the original graph, embedded numbers, and the user's active Origin session. The batch helper deliberately creates new projects; do not use it to reconstruct a complex existing project without inspecting the project first.
 - **PowerPoint that opens Origin when double-clicked:** read [references/powerpoint-ole.md](references/powerpoint-ole.md), then use `scripts/origin_to_ppt.py`. A PDF, SVG, EMF picture, or PNG is not an editable Origin OLE object.

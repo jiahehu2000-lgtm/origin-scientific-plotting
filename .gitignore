@@ -13,3 +13,6 @@ results/
 *_verification/
 .env
 .env.*
+_validation/
+!docs/journal-gallery/*.pdf
+!docs/journal-gallery/*.opju

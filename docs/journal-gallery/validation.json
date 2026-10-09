@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-09",
+  "origin_internal_version": 9.8002,
+  "data": "Synthetic, fully specified in examples/journal-gallery/figures.json.",
+  "specification_sha256": "3ab44b2eac46604df112d35b10eca67e9ba9271ecd270b1f05889ebf66a17d25",
+  "scope": "Native numerical and layout verification; visual inspection recorded separately. Not certification of journal compliance or scientific results.",
+  "figures": [
+    {
+      "id": "01_time_response",
+      "caption": "Synthetic demonstration: samples as markers and a supplied reference as a line. No model fitting or experimental claim. Initial canvas 88.9 mm; final compacted size must be read from the exported PDF.",
+      "native_origin": true,
+      "origin_internal_version": 9.8002,
+      "reopened_values_exact": true,
+      "native_layers": [
+        {
+          "layer": 1,
+          "frame": [
+            0.1234,
+            0.02751,
+            0.8387,
+            0.8019
+          ],
+          "font_pt": 7.0,
+          "axis_ranges": {
+            "x": [
+              0.0,
+              2.0
+            ],
+            "y": [
+              0.0,
+              1.1
+            ]
+          },
+          "visible_label_sides": [
+            1,
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "native_text_objects": 2,
+      "compact_page": {
+        "page_before_inches": [
+          4.128333333333333,
+          3.328333333333333
+        ],
+        "page_after_inches": [
+          3.255,
+          2.423786286286286
+        ],
+        "crop_bbox_pixels": [
+          326,
+          246,
+          2279,
+          1701
+        ],
+        "font_sizes_preserved": true,
+        "physical_frame_tolerance_inches": 0.0025
+      },
+      "export_qa": {
+        "png_size": [
+          1953,
+          1452
+        ],
+        "content_bbox": [
+          36,
+          36,
+          1917,
+          1416
+        ],
+        "margins_pixels": [
+          36,
+          36,
+          36,
+          36
+        ],
+        "dpi_requested": 600,
+        "needs_visual_inspection": true,
+        "pdf_pages": 1,
+        "pdf_images": 0,
+        "pdf_vector_paths": 59,
+        "pdf_page_inches": [
+          3.263888888888889,
+          2.4305555555555554
+        ]
+      },
+      "exports": {
+        "png": {
+          "path": "01_time_response.png",
+          "sha256": "05cb30755cb84701168f0a7ea6796c220ccc1c5414abb9942ce6ec1fecb9a558"
+        },
+        "pdf": {
+          "path": "01_time_response.pdf",
+          "sha256": "473b723820880e7b8863fba21ac6898db65afa890cf13174d41b14dd4fd61d7e"
+        },
+        "opju": {
+          "path": "01_time_response.opju",
+          "sha256": "837de81b79af257cf9fd717a56d3f4cc0d6a9c82fbace88ab60068f358ef28ed"
+        }
+      },
+      "pdf_text_extractable": true,
+      "pdf_font_names": [
+        "ArialMT"
+      ],
+      "pdf_text_sizes_pt": [
+        6.9593
+      ],
+      "pdf_size_mm": [
+        82.903,
+        61.736
+      ],
+      "visual_inspection": "passed: native exports and four-panel preview inspected; labels, legends, pairing, matrix orientation and missing row checked"
+    },
+    {
+      "id": "02_individual_points",
+      "caption": "Synthetic independent groups, six observations each. Horizontal offsets are explicit display positions; supplied responses are unchanged. No mean, error bar or statistical test is inferred.",
+      "native_origin": true,
+      "origin_internal_version": 9.8002,
+      "reopened_values_exact": true,
+      "native_layers": [
+        {
+          "layer": 1,
+          "frame": [
+            0.1251,
+            0.04101,
+            0.8534999999999999,
+            0.797
+          ],
+          "font_pt": 7.0,
+          "axis_ranges": {
+            "x": [
+              0.5,
+              3.5
+            ],
+            "y": [
+              0.0,
+              1.2
+            ]
+          },
+          "visible_label_sides": [
+            1,
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "native_text_objects": 1,
+      "compact_page": {
+        "page_before_inches": [
+          4.128333333333333,
+          3.328333333333333
+        ],
+        "page_after_inches": [
+          3.198333333333333,
+          2.4387787787787785
+        ],
+        "crop_bbox_pixels": [
+          326,
+          226,
+          2245,
+          1690
+        ],
+        "font_sizes_preserved": true,
+        "physical_frame_tolerance_inches": 0.0025
+      },
+      "export_qa": {
+        "png_size": [
+          1918,
+          1464
+        ],
+        "content_bbox": [
+          35,
+          36,
+          1881,
+          1428
+        ],
+        "margins_pixels": [
+          35,
+          36,
+          37,
+          36
+        ],
+        "dpi_requested": 600,
+        "needs_visual_inspection": true,
+        "pdf_pages": 1,
+        "pdf_images": 0,
+        "pdf_vector_paths": 30,
+        "pdf_page_inches": [
+          3.2083333333333335,
+          2.4444444444444446
+        ]
+      },
+      "exports": {
+        "png": {
+          "path": "02_individual_points.png",
+          "sha256": "cb91faf6f4cd7b4ca18c3e89c2e4a34bda9a400f43e37b7777766a6a12478af6"
+        },
+        "pdf": {
+          "path": "02_individual_points.pdf",
+          "sha256": "9457b3327c8156228d082728eaeef8ffdb8159955c89372251b7acaf7ba05d4e"
+        },
+        "opju": {
+          "path": "02_individual_points.opju",
+          "sha256": "f27fa12476bea2677ae2331f032369d3e1d8ad5e7145c76fb050c611cf21f1dc"
+        }
+      },
+      "pdf_text_extractable": true,
+      "pdf_font_names": [
+        "ArialMT"
+      ],
+      "pdf_text_sizes_pt": [
+        6.9582
+      ],
+      "pdf_size_mm": [
+        81.492,
+        62.089
+      ],
+      "visual_inspection": "passed: native exports and four-panel preview inspected; labels, legends, pairing, matrix orientation and missing row checked"
+    },
+    {
+      "id": "03_paired_observations",
+      "caption": "Synthetic paired observations: each gray segment connects the same observation before and after. Six pairs, not twelve independent observations. No statistical inference is performed.",
+      "native_origin": true,
+      "origin_internal_version": 9.8002,
+      "reopened_values_exact": true,
+      "native_layers": [
+        {
+          "layer": 1,
+          "frame": [
+            0.1251,
+            0.04101,
+            0.8534999999999999,
+            0.797
+          ],
+          "font_pt": 7.0,
+          "axis_ranges": {
+            "x": [
+              0.5,
+              2.5
+            ],
+            "y": [
+              0.0,
+              1.2
+            ]
+          },
+          "visible_label_sides": [
+            1,
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "native_text_objects": 1,
+      "compact_page": {
+        "page_before_inches": [
+          4.128333333333333,
+          3.328333333333333
+        ],
+        "page_after_inches": [
+          3.198333333333333,
+          2.4387787787787785
+        ],
+        "crop_bbox_pixels": [
+          326,
+          226,
+          2245,
+          1690
+        ],
+        "font_sizes_preserved": true,
+        "physical_frame_tolerance_inches": 0.0025
+      },
+      "export_qa": {
+        "png_size": [
+          1918,
+          1464
+        ],
+        "content_bbox": [
+          35,
+          36,
+          1881,
+          1428
+        ],
+        "margins_pixels": [
+          35,
+          36,
+          37,
+          36
+        ],
+        "dpi_requested": 600,
+        "needs_visual_inspection": true,
+        "pdf_pages": 1,
+        "pdf_images": 0,
+        "pdf_vector_paths": 29,
+        "pdf_page_inches": [
+          3.2083333333333335,
+          2.4444444444444446
+        ]
+      },
+      "exports": {
+        "png": {
+          "path": "03_paired_observations.png",
+          "sha256": "c7cfd32528a7263eea2dd6655fcbb1941897a70aa3d31d2ad48ba40176cd70b8"
+        },
+        "pdf": {
+          "path": "03_paired_observations.pdf",
+          "sha256": "a458f773d8c9e67f2278d3c29d9a70366bca9048fab2779252fa32a9135bc61f"
+        },
+        "opju": {
+          "path": "03_paired_observations.opju",
+          "sha256": "9163474850629c76e353bfa492b8073200055415f446408e9c7c9af4c215ace8"
+        }
+      },
+      "pdf_text_extractable": true,
+      "pdf_font_names": [
+        "ArialMT"
+      ],
+      "pdf_text_sizes_pt": [
+        6.9582
+      ],
+      "pdf_size_mm": [
+        81.492,
+        62.089
+      ],
+      "visual_inspection": "passed: native exports and four-panel preview inspected; labels, legends, pairing, matrix orientation and missing row checked"
+    },
+    {
+      "id": "04_confusion_matrix",
+      "caption": "Synthetic count matrix with explicit row normalization. Rows are true classes, columns predictions. Class 5 is untested and missing, not a measured zero. Blue is a sequential scale; normalization is not a statistical test.",
+      "native_origin": true,
+      "origin_internal_version": 9.8002,
+      "reopened_values_exact": true,
+      "native_layers": [
+        {
+          "layer": 1,
+          "frame": [
+            0.0931,
+            0.03279,
+            0.7395,
+            0.8377
+          ],
+          "font_pt": 7.0,
+          "axis_ranges": {
+            "x": [
+              0.5,
+              5.5
+            ],
+            "y": [
+              5.5,
+              0.5
+            ]
+          },
+          "visible_label_sides": [
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "layer": 2,
+          "frame": [
+            0.8576999999999999,
+            0.03279,
+            0.01833,
+            0.8377
+          ],
+          "font_pt": 7.0,
+          "axis_ranges": {
+            "x": [
+              0.0,
+              1.0
+            ],
+            "y": [
+              0.0,
+              1.0
+            ]
+          },
+          "visible_label_sides": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "native_text_objects": 22,
+      "compact_page": {
+        "page_before_inches": [
+          4.128333333333333,
+          3.828333333333333
+        ],
+        "page_after_inches": [
+          3.455,
+          3.0503387003191182
+        ],
+        "crop_bbox_pixels": [
+          311,
+          196,
+          2384,
+          2027
+        ],
+        "font_sizes_preserved": true,
+        "physical_frame_tolerance_inches": 0.0025
+      },
+      "export_qa": {
+        "png_size": [
+          2073,
+          1830
+        ],
+        "content_bbox": [
+          36,
+          36,
+          2037,
+          1794
+        ],
+        "margins_pixels": [
+          36,
+          36,
+          36,
+          36
+        ],
+        "dpi_requested": 600,
+        "needs_visual_inspection": true,
+        "pdf_pages": 1,
+        "pdf_images": 0,
+        "pdf_vector_paths": 543,
+        "pdf_page_inches": [
+          3.4583333333333335,
+          3.0555555555555554
+        ]
+      },
+      "exports": {
+        "png": {
+          "path": "04_confusion_matrix.png",
+          "sha256": "a6ad4463c7a8ef6fb3903f74ee84a5488d8ebae3d676d1ea17de113930bd278e"
+        },
+        "pdf": {
+          "path": "04_confusion_matrix.pdf",
+          "sha256": "c885c6f3b5d0177a8f6e228dbcac728b320567d4d1392d16ff50de9bcaeaca27"
+        },
+        "opju": {
+          "path": "04_confusion_matrix.opju",
+          "sha256": "ad37c8a4dce4bbce6632cc36c809d2ed4f9a5c8fcfa6e783d176a2414578a2f5"
+        }
+      },
+      "pdf_text_extractable": true,
+      "pdf_font_names": [
+        "ArialMT"
+      ],
+      "pdf_text_sizes_pt": [
+        6.9593
+      ],
+      "pdf_size_mm": [
+        87.842,
+        77.611
+      ],
+      "visual_inspection": "passed: native exports and four-panel preview inspected; labels, legends, pairing, matrix orientation and missing row checked"
+    }
+  ]
+}

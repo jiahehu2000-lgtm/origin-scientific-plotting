@@ -23,6 +23,14 @@ For each figure the saved OPJU was reopened. The numeric tables, axis ranges/inc
 
 Origin exported PNG, PDF, and EMF. Each PDF was checked as a single page with vector paths and no raster plot images. SVG was derived from that PDF. PNGs were visually inspected for legends, labels, orientation, missing values, page borders, and excessive blank space. Public preview images are direct exports of the synthetic examples.
 
+## Journal-selection gallery update (2026-10-09)
+
+Four additional synthetic examples were drawn in the same actual Origin version: time response, independent observations, paired observations, and a normalized confusion matrix with an untested class. Every saved OPJU was reopened and its numbers, native geometry and typography verified. The final PNGs were visually inspected after relocating two annotations that initially crossed the axis frame.
+
+Native settings are Arial 7 pt. All four exported PDFs contain vector paths and extractable ArialMT text, with no embedded raster plot images; actual PDF font metrics are approximately 6.958–6.959 pt. Actual compacted export widths differ from the initial canvases and are recorded rather than being advertised as fixed journal column widths. Public [gallery downloads](journal-gallery/README.md) and [verification summary](journal-gallery/validation.json) contain only synthetic data and no local source paths.
+
+The new journal-style reference and specifications passed skill metadata/reference validation, the skill-creator validator, the existing ten unit tests, and offline specification validation. Hosted CI checks both example specifications; it does not run licensed Origin. Source conflicts and unavailable Cell-specific instructions remain explicit in the [Chinese guide](CNS期刊风格与选图指南.md).
+
 ## PowerPoint checks
 
 The four graphs were copied from Origin as OLE objects and placed in a two-slide deck. All four reopened objects had shape type 7 and `Origin95.Graph`, were embedded rather than linked, retained a 5 cm width, and had their aspect ratio locked. Slide previews were inspected.

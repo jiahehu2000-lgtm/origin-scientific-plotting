@@ -1,0 +1,1079 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-10-09",
+  "scope": "Dated journal artwork evidence and original plot-selection methods. Requirements apply only to the recorded journal, artwork type and submission stage. Third-party styles are not official acceptance criteria.",
+  "sources": [
+    {
+      "id": "nature_final",
+      "title": "Nature: Final submission",
+      "url": "https://www.nature.com/nature/for-authors/final-submission",
+      "authority": "official journal instructions",
+      "stage": "final production files / after acceptance",
+      "locator": "Final print-only artwork: Lettering, Sizing, Electronic image formats; Extended data display items",
+      "claims": {
+        "figure_width_mm": {
+          "single_column": 89,
+          "double_column": 183,
+          "one_and_half_columns": [
+            120,
+            136
+          ]
+        },
+        "page_depth_mm_not_max_figure_height": 247,
+        "font_family": [
+          "Arial",
+          "Helvetica"
+        ],
+        "ordinary_text_pt": {
+          "minimum": 5,
+          "maximum": 7
+        },
+        "panel_label": {
+          "size_pt": 8,
+          "bold": true,
+          "upright": true,
+          "case": "lowercase a, b, c"
+        },
+        "stroke_width_final_size_pt": {
+          "minimum": 0.25,
+          "maximum": 1
+        },
+        "photograph_min_dpi_at_max_use_size": 300,
+        "graph_vector_formats": [
+          "AI",
+          "PostScript",
+          "EPS",
+          "PDF"
+        ],
+        "editable_text_and_line_art": true,
+        "colour": "RGB recommended; online RGB retained, print converted to CMYK",
+        "extended_data": {
+          "max_ppi": 300,
+          "max_file_MB": 10,
+          "page_max_cm": [
+            18,
+            24
+          ],
+          "formats": [
+            "JPEG",
+            "TIFF",
+            "EPS"
+          ],
+          "colour": "RGB"
+        }
+      },
+      "limitations": "89/183 mm are guidance, editor sets final size. 247 mm is page depth, not permitted full figure height. This page accepts TIFF/PSD photographs and fallback JPEG, whereas the newer linked research figure guide rejects standalone TIFF/JPEG/PNG for main final figure files; retain this discrepancy and use editable vector PDF for graphs/composite main figures. Extended Data is a separate output profile."
+    },
+    {
+      "id": "nature_initial",
+      "title": "Nature: Initial submission",
+      "url": "https://www.nature.com/nature/for-authors/initial-submission",
+      "authority": "official journal instructions",
+      "stage": "initial submission, with optional advance guidance for final figure preparation",
+      "locator": "Figures; Statistical information",
+      "claims": {
+        "initial_high_resolution_files_required": false,
+        "initial_images_must_allow_review": true,
+        "recommended_final_width_mm": {
+          "single_column": 90,
+          "double_column": 180
+        },
+        "recommended_final_max_height_mm": 170,
+        "ordinary_text_pt": [
+          5,
+          7
+        ],
+        "image_dpi": ">=300",
+        "statistics_reporting": "Define error bars; report exact n, replicates and relevant P values",
+        "colour": "RGB; distinguishable colours; avoid arbitrary red/green contrast and rainbow scales"
+      },
+      "limitations": "The 90/180 mm values are on the initial page's advance final-artwork advice, not a different scientifically required initial figure size. Current official final sources use 89/183 mm. Do not quietly average or round these discrepancies."
+    },
+    {
+      "id": "nature_figure_building",
+      "title": "Nature research figure guide: Building and exporting figure panels",
+      "url": "https://research-figure-guide.nature.com/figures/building-and-exporting-figure-panels/",
+      "authority": "official illustrated guide linked by Nature Final submission",
+      "stage": "final main figures; separate Extended Data section",
+      "locator": "Figure sizing; Panel arrangement; Accessibility; Main figure accepted formats",
+      "claims": {
+        "main_width_mm": {
+          "single_column": 89,
+          "double_column": 183
+        },
+        "main_max_height_mm": 170,
+        "layout": "Compact alphabetical panel order where possible; size panels for content legibility",
+        "font": "Standard editable embedded fonts; avoid outlined text",
+        "colour_accessibility": "Avoid red/green combinations and rainbow scales; use keys or keylines, not colour names alone",
+        "text_contrast_ratio": ">4.5",
+        "palette_hex_example": [
+          "#000000",
+          "#e69f00",
+          "#56b4e9",
+          "#009e73",
+          "#f0e442",
+          "#0072b2",
+          "#d55e00",
+          "#cc79a7"
+        ],
+        "main_preferred_formats": [
+          "AI",
+          "EPS",
+          "PDF with editing retained"
+        ],
+        "main_standalone_rejected_formats": [
+          "JPEG",
+          "TIFF",
+          "PNG"
+        ],
+        "main_file_MB_target": "<=50 where possible"
+      },
+      "limitations": "The guide refers specifically to Nature widths, not every Nature Portfolio title. Its colour palette is an example, not a mandatory branded palette. Text contrast requirement is for text; do not impose it on every pair of data colours. Raster photographs may be embedded in editable vector composites. Acceptance of standalone raster conflicts with the linked final-submission page."
+    },
+    {
+      "id": "nature_figure_specifications",
+      "title": "Nature research figure guide: Preparing figures - our specifications",
+      "url": "https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/",
+      "authority": "official illustrated guide",
+      "stage": "production-quality research figures",
+      "locator": "Graphs; Image resolution; Text / Font choices / Outlined text",
+      "claims": {
+        "axis_requirement": "Include axes and ticks; label axes with units in parentheses",
+        "ordinary_text_pt": {
+          "minimum": 5,
+          "maximum": 7
+        },
+        "panel_label_pt": 8,
+        "font": "Sans-serif, preferably Arial or Helvetica; Symbol for Greek; editable embedded text, not outlines",
+        "photograph_min_dpi": 300,
+        "online_proof_max_dpi": 450,
+        "scale_bars": "Use scale bars rather than magnification; keep bars and labels on editable layers",
+        "decorative_elements": "Avoid gridlines, drop shadows, clutter, overlapping and coloured text"
+      },
+      "limitations": "300 dpi is for photographic imagery, not a reason to rasterize graphs. Upsampling does not recover missing image detail. Context-specific gridlines may still support interpretation in a general scientific figure; this is Nature house guidance."
+    },
+    {
+      "id": "nature_methods_aip",
+      "title": "Nature Methods: AIP and formatting",
+      "url": "https://www.nature.com/nmeth/submission-guidelines/aip-and-formatting",
+      "authority": "official journal instructions",
+      "stage": "accepted in principle (AIP), after peer review",
+      "locator": "3 - Figures",
+      "claims": {
+        "max_width_mm": 180,
+        "min_resolution_dpi": 300,
+        "ordinary_text_pt": [
+          5,
+          7
+        ],
+        "font": "Sans-serif; Symbol for Greek",
+        "editable_overlay": "Do not flatten labels or scale/error bars into images",
+        "legend_statistics": "Describe centre values and all error bars/calculations; give n, test and P values",
+        "linked_final_artwork_guide": "https://www.nature.com/documents/NRJs-guide-to-preparing-final-artwork.pdf"
+      },
+      "limitations": "AIP page explicitly names the post-review stage. Its 180 mm maximum differs from Nature flagship's 183 mm double column. Do not conflate the prohibition of PDF manuscript text with vector PDF figure acceptance."
+    },
+    {
+      "id": "nature_branded_artwork",
+      "title": "Nature branded research journals: Guide to preparing final artwork",
+      "url": "https://www.nature.com/documents/NRJs-guide-to-preparing-final-artwork.pdf",
+      "authority": "official PDF linked by Nature Methods AIP",
+      "stage": "final submission",
+      "locator": "PDF page 1: Figure sizes, Text, Colour, Saving figure panels; page 2: Combining vectors and bitmaps",
+      "claims": {
+        "research_and_review_width_mm": {
+          "single_column": 88,
+          "double_column": 180
+        },
+        "other_content_width_mm": {
+          "single_column": 58,
+          "double_column": 121,
+          "three_column": 185
+        },
+        "ordinary_text_pt": [
+          5,
+          7
+        ],
+        "original_research_colour": "RGB",
+        "other_content_colour": "CMYK, including Perspectives, Progress Articles, Review Articles",
+        "vector_formats": [
+          "AI",
+          "EPS",
+          "PDF"
+        ],
+        "bitmap_min_dpi_at_max_size": 300,
+        "overlays": "Editable vector text, axes, boxes, arrows and scale bars over embedded bitmaps",
+        "file_MB_target": "<=50"
+      },
+      "limitations": "Title encompasses branded research journals; inspect target journal's own live AIP page and editor instructions. 88/180 applies to listed research/review content; 58/121/185 applies to other content. Height depends on caption length; it is not a fixed portfolio-wide height. PDF does not specify a numeric line width in the inspected content."
+    },
+    {
+      "id": "nature_communications",
+      "title": "Nature Communications: How to submit",
+      "url": "https://www.nature.com/ncomms/submit/how-to-submit",
+      "authority": "official journal instructions",
+      "stage": "general figure rules and final publication file preparation; initial combined manuscript permitted",
+      "locator": "General figure guidelines; Figures: line art and photographic images",
+      "claims": {
+        "final_width_mm": {
+          "single_column": 88,
+          "double_column": 180
+        },
+        "font": "Clear sans-serif, e.g. Helvetica, consistent size; numeric pt range not specified on this page",
+        "panel_label": "Lowercase bold a, b, etc.; same type size as elsewhere",
+        "final_min_line_width_pt": 1,
+        "vector_formats": [
+          "EPS",
+          "AI",
+          "PDF"
+        ],
+        "fallback_raster_line_art_dpi": 1200,
+        "photograph_format": "TIFF, RGB for colour",
+        "photograph_min_dpi": 300,
+        "photograph_min_width_pixels": {
+          "single_column": 1040,
+          "double_column": 2080
+        },
+        "panel_relation": "Multiple panels only when logically connected",
+        "colour": "Recolour arbitrary red/green graphics to accessible alternatives",
+        "initial_combined_file_MB_max": 30
+      },
+      "limitations": "Do not copy Nature's 0.25–1 pt range into this profile: Nature Communications explicitly requires the thinnest final line >=1 pt. Page does not provide a numeric standard font size. 1040/2080 pixels are the official rounded examples; at exactly 300 dpi use ceil(mm/25.4*300), i.e. 1040/2126 pixels for 88/180 mm, to satisfy both intended physical width and resolution."
+    },
+    {
+      "id": "nature_final_pdf",
+      "title": "Nature: Final guide to authors",
+      "url": "https://www.nature.com/documents/Final_guide_to_authors.pdf",
+      "authority": "official illustrated summary PDF",
+      "stage": "production-quality artwork",
+      "locator": "PDF pages 3, 7, 9, 10",
+      "claims": {
+        "width_text_mm": [
+          89,
+          183
+        ],
+        "width_diagram_double_column_mm": 180,
+        "height_figure_area_approx_mm": 170,
+        "ordinary_text_pt": [
+          5,
+          7
+        ],
+        "panel_label_pt": 8,
+        "photograph_min_dpi": 300,
+        "editable_line_art_and_text": true
+      },
+      "limitations": "PDF itself shows 183 mm in prose but 180 mm in some double-column diagrams. Use target journal current page and flag conflict. The older one-page nature-final-artwork.pdf uses 247 mm page depth; do not call that a max figure height."
+    },
+    {
+      "id": "points_of_view_index",
+      "title": "Data visualization: A view of every Points of View column",
+      "url": "https://blogs.nature.com/methagora/2013/07/data-visualization-points-of-view.html",
+      "authority": "official Nature Methods blog summary and linked primary articles",
+      "stage": "scientific communication advice, not submission rules",
+      "claims": {
+        "use": "Public topic-based index: composition, colour, plot types, multidimensional data and exploration"
+      },
+      "limitations": "Original post dated 2013 and later updated; useful discovery index, not a current numerical journal specification. Several full Points of View papers are subscription-only; only publicly visible summaries/captions were used where noted."
+    },
+    {
+      "id": "bar_chart_editorial",
+      "title": "Kick the bar chart habit",
+      "url": "https://www.nature.com/articles/nmeth.2837",
+      "doi": "10.1038/nmeth.2837",
+      "published_date": "2014-01-30",
+      "authority": "Nature Methods editorial, full text accessible",
+      "claims": {
+        "guidance": "Bars suit counted values. For statistical samples prefer mean-and-error or box plots; a bar of the sample mean hides the underlying distribution. A connected mean-and-error display can emphasize a trend."
+      },
+      "limitations": "Communication advice, not prohibition of all bars; does not mandate one summary method for every experiment."
+    },
+    {
+      "id": "boxplot_statistics",
+      "title": "Visualizing samples with box plots",
+      "url": "https://www.nature.com/articles/nmeth.2813",
+      "doi": "10.1038/nmeth.2813",
+      "published_date": "2014-01-30",
+      "authority": "Nature Methods Points of Significance",
+      "claims": {
+        "guidance": "Box plots describe sample spread and differences. Public Figure 2 caption advises avoiding them for very small samples (n<5); Figure 3 notes quartiles are more intuitive for skewed samples than mean and SD."
+      },
+      "limitations": "Current official web page exposes preview and figure captions, not the full article. The n<5 guidance is methodological advice, not a journal acceptance gate. Do not infer reliable population density from small samples."
+    },
+    {
+      "id": "show_dots",
+      "title": "Show the dots in plots",
+      "url": "https://www.nature.com/articles/s41551-017-0079",
+      "doi": "10.1038/s41551-017-0079",
+      "published_date": "2017-05-10",
+      "authority": "Nature Biomedical Engineering editorial, full text accessible",
+      "claims": {
+        "guidance": "Show individual observations when feasible, including overlaid dots if bars are useful. Means and spread can hide distinct distributions and dependent-sample patterns. Dense scatter can become crowded for large samples."
+      },
+      "limitations": "Editorial recommendation; large-sample crowding is data- and layout-dependent, not a universal n threshold requiring density estimates."
+    },
+    {
+      "id": "heatmaps",
+      "title": "Heat maps",
+      "url": "https://www.nature.com/articles/nmeth.1902",
+      "doi": "10.1038/nmeth.1902",
+      "published_date": "2012-02-28",
+      "authority": "Nature Methods Points of View",
+      "claims": {
+        "guidance": "Heat maps can present multivariate data; apply colour, order/clustering and parallel-coordinate alternatives according to the analytical question."
+      },
+      "limitations": "Preview/figure captions and official index available; full text not inspected. No claim that a heatmap is mandatory for all matrices."
+    },
+    {
+      "id": "quantitative_colour",
+      "title": "Mapping quantitative data to color",
+      "url": "https://www.nature.com/articles/nmeth.2134",
+      "doi": "10.1038/nmeth.2134",
+      "published_date": "2012-07-30",
+      "authority": "Nature Methods Points of View",
+      "claims": {
+        "guidance": "Select colour maps according to data structure; colour is a compact encoding for large datasets."
+      },
+      "limitations": "Public abstract and official index were inspected; article full text/PDF unavailable through current fetch. Sequential versus diverging map choice below is explicitly a practice synthesis, not quoted mandatory policy."
+    },
+    {
+      "id": "temporal_data",
+      "title": "Temporal data",
+      "url": "https://www.nature.com/articles/nmeth.3262",
+      "doi": "10.1038/nmeth.3262",
+      "published_date": "2015-01-29",
+      "authority": "Nature Methods Points of View",
+      "claims": {
+        "guidance": "Use time's inherent properties when choosing the visual representation."
+      },
+      "limitations": "Only public preview/figure description inspected. XY line/marker recommendation below is a reasoned application, not a journal rule."
+    },
+    {
+      "id": "complex_plots",
+      "title": "Unentangling complex plots",
+      "url": "https://www.nature.com/articles/nmeth.3451",
+      "doi": "10.1038/nmeth.3451",
+      "published_date": "2015-06-30",
+      "authority": "Nature Methods Points of View",
+      "claims": {
+        "guidance": "Carefully designed subplots can communicate better than a complicated single overview; public figure caption describes small multiples and progressive cropping for traces at different y ranges."
+      },
+      "limitations": "Public preview/figure captions only. Use consistent scales when visual cross-panel comparisons require them, and disclose different scales; shared limits are not universally mandated by this paper."
+    },
+    {
+      "id": "third_dimension",
+      "title": "Into the third dimension",
+      "url": "https://www.nature.com/articles/nmeth.2151",
+      "doi": "10.1038/nmeth.2151",
+      "published_date": "2012-08-30",
+      "authority": "Nature Methods Points of View",
+      "claims": {
+        "guidance": "3D visualization is useful for real spatial data and rarely for other data types."
+      },
+      "limitations": "Public preview inspected. This discourages decorative 3D; it does not forbid legitimate spatial/surface representations."
+    },
+    {
+      "id": "correlation",
+      "title": "Association, correlation and causation",
+      "url": "https://www.nature.com/articles/nmeth.3587",
+      "doi": "10.1038/nmeth.3587",
+      "published_date": "2015-09-29",
+      "authority": "Nature Methods Points of Significance",
+      "claims": {
+        "guidance": "Correlation demonstrates association, not causation."
+      },
+      "limitations": "Public preview inspected; scatterplot selection below is an analytical practice synthesis. A fitted line requires its own model and uncertainty checks."
+    },
+    {
+      "id": "science_initial",
+      "title": "Science — Instructions for preparing an initial manuscript",
+      "url": "https://www.science.org/content/page/instructions-preparing-initial-manuscript#preparation-of-figures",
+      "authority": "AAAS / Science 官方",
+      "section": "Preparation of figures"
+    },
+    {
+      "id": "science_revised",
+      "title": "Science — Instructions for preparing a revised manuscript",
+      "url": "https://www.science.org/content/page/instructions-preparing-revised-manuscript",
+      "authority": "AAAS / Science 官方",
+      "section": "Preparing revised figures"
+    },
+    {
+      "id": "science_pdf_2025",
+      "title": "Science — Guide to Preparing Figures (author_prep_guide_2025.pdf)",
+      "url": "https://www.science.org/cms/asset/67f37ac8-4d02-4625-8a05-230568cb8323/author_prep_guide_2025.pdf",
+      "authority": "Science 初稿官网直接链接的官方PDF",
+      "sha256": "4a3f51f09ff99957fad4b235298b8dc89415342534db9932e0473ab89040899d",
+      "scope_note": "仅按Science页面链接使用；不得自动推广到Science全系列"
+    },
+    {
+      "id": "sciadv_authors",
+      "title": "Science Advances — Information for Authors",
+      "url": "https://www.science.org/content/page/science-advances-information-authors",
+      "authority": "AAAS / Science Advances 官方",
+      "section": "Formatting an Initial Manuscript / Revised Manuscripts"
+    },
+    {
+      "id": "sciadv_pdf_2026",
+      "title": "Science Advances — Guide to Preparing Figures (2026)",
+      "url": "https://www.science.org/cms/asset/76887697-528f-4a22-afea-cee904504e76/sciadv_guide_to_preparing_figures_2026.pdf",
+      "authority": "Science Advances 作者官网直接链接的官方PDF",
+      "sha256": "3bd15d1415273987e1f08d8e8016d21e90c1abf34470eee976bbb792f22952f9",
+      "scope_note": "虽页眉写Science Family of Journals，但作者页面链接和p5明确Science Advances；本记录不外推其他刊"
+    },
+    {
+      "id": "aaas_authors_2019",
+      "title": "AAAS — A guide for Authors from the Editors at Science (2019)",
+      "url": "https://promo.aaas.org/images/Publishing/Journals/2019/Authors%20Guide%20Brochure_Final.pdf",
+      "authority": "AAAS 官方作者指导册",
+      "pages": "PDF p3 / 印刷页4–5"
+    },
+    {
+      "id": "cellpress_figure_guidelines",
+      "title": "Cell Press Figure Guidelines",
+      "url": "https://www.cell.com/information-for-authors/figure-guidelines",
+      "authority": "Cell Press 官方",
+      "retrieved_on": "2026-10-09",
+      "content_verified": false
+    },
+    {
+      "id": "cell_author_resources",
+      "title": "Cell author resources",
+      "url": "https://www.cell.com/cell/author-resources",
+      "authority": "Cell 官方",
+      "retrieved_on": "2026-10-09",
+      "content_verified": false
+    },
+    {
+      "id": "cell_reports_author_resources",
+      "title": "Cell Reports author resources",
+      "url": "https://www.cell.com/cell-reports/author-resources",
+      "authority": "Cell Reports 官方",
+      "retrieved_on": "2026-10-09",
+      "content_verified": false
+    },
+    {
+      "id": "elsevier_overview",
+      "title": "Artwork overview",
+      "url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-overview",
+      "authority": "Elsevier 官方通用指南",
+      "retrieved_on": "2026-10-09",
+      "content_verified": true,
+      "sections": [
+        "Recommended file formats",
+        "Font information"
+      ]
+    },
+    {
+      "id": "elsevier_sizing",
+      "title": "Artwork sizing",
+      "url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-sizing",
+      "authority": "Elsevier 官方通用指南",
+      "retrieved_on": "2026-10-09",
+      "content_verified": true,
+      "sections": [
+        "Sizing of artwork",
+        "Number of pixels versus resolution and print size, for bitmap images"
+      ]
+    },
+    {
+      "id": "elsevier_types",
+      "title": "Artwork types",
+      "url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-types",
+      "authority": "Elsevier 官方通用指南",
+      "retrieved_on": "2026-10-09",
+      "content_verified": true,
+      "sections": [
+        "Line art — EPS (vector based)",
+        "Line art — TIFF (bitmap)",
+        "Grayscale images in TIFF/JPEG format",
+        "RGB images in TIFF/JPEG format",
+        "Combination art — TIFF/JPEG format",
+        "Combination art — EPS format"
+      ]
+    },
+    {
+      "id": "elsevier_formats",
+      "title": "Artwork formats checklist",
+      "url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-formats-checklist",
+      "authority": "Elsevier 官方通用指南",
+      "retrieved_on": "2026-10-09",
+      "content_verified": true,
+      "sections": [
+        "Preferred and accepted file formats for artwork submission",
+        "Checklist",
+        "Figure captions"
+      ]
+    },
+    {
+      "id": "elsevier_accessibility",
+      "title": "Artwork and media instructions",
+      "url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions",
+      "authority": "Elsevier 官方通用指南",
+      "retrieved_on": "2026-10-09",
+      "content_verified": true,
+      "sections": [
+        "Creating accessible figures for all types of color vision",
+        "Elsevier's policy on manipulation of images"
+      ]
+    },
+    {
+      "id": "weissgerber_2015",
+      "title": "Beyond Bar and Line Graphs: Time for a New Data Presentation Paradigm",
+      "authors": "Weissgerber TL, Milic NM, Winham SJ, Garovic VD",
+      "journal": "PLOS Biology",
+      "article_type": "Perspective，包含703篇生理学研究论文的系统审查",
+      "doi": "10.1371/journal.pbio.1002128",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128",
+      "published_on": "2015-04-22",
+      "retrieved_on": "2026-10-09",
+      "content_verified": true
+    },
+    {
+      "id": "lord_2020",
+      "title": "SuperPlots: Communicating reproducibility and variability in cell biology",
+      "authors": "Lord SJ, Velle KB, Mullins RD, Fritz-Laylin LK",
+      "journal": "Journal of Cell Biology",
+      "article_type": "Viewpoint，原始方法说明与案例",
+      "doi": "10.1083/jcb.202001064",
+      "url": "https://rupress.org/jcb/article/219/6/e202001064/151717/SuperPlots-Communicating-reproducibility-and",
+      "published_on": "2020-04-28",
+      "retrieved_on": "2026-10-09",
+      "content_verified": true,
+      "scope_note": "Journal of Cell Biology 属 Rockefeller University Press，不能误称 Cell Press 的 Cell。"
+    },
+    {
+      "id": "cumming_2007",
+      "title": "Error bars in experimental biology",
+      "authors": "Cumming G, Fidler F, Vaux DL",
+      "journal": "Journal of Cell Biology",
+      "article_type": "Feature，原始方法说明",
+      "doi": "10.1083/jcb.200611141",
+      "url": "https://rupress.org/jcb/article/177/1/7/34602/Error-bars-in-experimental-biology",
+      "full_text_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2064100/",
+      "published_on": "2007-04-09",
+      "retrieved_on": "2026-10-09",
+      "content_verified": true
+    },
+    {
+      "id": "scienceplots",
+      "title": "SciencePlots",
+      "url": "https://github.com/garrettj403/SciencePlots",
+      "authority": "Third-party project maintainer",
+      "scope": "Public Matplotlib styles; not AAAS official approval"
+    },
+    {
+      "id": "cnsplots",
+      "title": "cnsplots",
+      "url": "https://github.com/faridrashidi/cnsplots",
+      "authority": "Third-party project maintainer",
+      "scope": "Public Python visualization project; not a journal requirement"
+    },
+    {
+      "id": "color_universal_design",
+      "title": "Color Universal Design (Okabe and Ito)",
+      "url": "https://jfly.uni-koeln.de/color/",
+      "authority": "Original author guidance",
+      "scope": "Use color plus shape, line or position; not journal-specific mandatory colors"
+    },
+    {
+      "id": "bengio_grandvalet_2004",
+      "title": "No Unbiased Estimator of the Variance of K-Fold Cross-Validation",
+      "url": "https://www.jmlr.org/papers/v5/grandvalet04a.html",
+      "authority": "Original methods paper",
+      "published_on": "2004-09",
+      "scope": "Correlations from overlapping folds make naive variance estimates unreliable"
+    }
+  ],
+  "science_profiles": [
+    {
+      "journal": "Science",
+      "status": "VERIFIED_WITH_CONFLICTING_OFFICIAL_SOURCES",
+      "webpage_guidance": {
+        "sources": [
+          "science_initial",
+          "science_revised"
+        ],
+        "final_width_mm": {
+          "one_column": 57,
+          "two_columns": 121,
+          "three_columns": 184
+        },
+        "width_strength": "通常印刷宽度；小柱图、简单折线图及胶图可以更小",
+        "type_points": {
+          "about": 7,
+          "min": 5,
+          "panel": 10
+        },
+        "panel": "大写、粗体；可能时左上角",
+        "min_final_line_points": 0.5,
+        "font_preference": "无衬线，Helvetica",
+        "accessibility_advice": "避开红绿并用或近似色；深背景用白字/白比例尺",
+        "page_refs": "science_initial: General guidelines / Typefaces and labels; science_revised: Figure layout and scaling"
+      },
+      "pdf_2025_guidance": {
+        "source": "science_pdf_2025",
+        "pages": "p1–2",
+        "final_width_mm": {
+          "one_column": 90,
+          "two_columns": 183
+        },
+        "width_strength": "布局示意；与网页冲突",
+        "label_points": [
+          6,
+          9
+        ],
+        "panel_points": 10,
+        "font_preference": "无衬线，Arial或Helvetica",
+        "min_final_line_points": 0.28,
+        "color_mode": "RGB",
+        "raster_photo_dpi": [
+          300,
+          500
+        ],
+        "embedded_image_min_ppi": 300,
+        "vector_preference": [
+          "AI",
+          "vector EPS",
+          "PDF"
+        ],
+        "raster_formats_in_pdf": [
+          "layered PSD",
+          "PNG",
+          "TIFF"
+        ],
+        "mixed_artwork": "按矢量格式交付以便编辑",
+        "editability": "保留独立文字/图形/照片层，嵌入链接图；不得栅格化、合层或转曲文字/线条",
+        "accessibility_advice": "红绿不可避免时增加明暗差、形状或纹理；检查色觉友好"
+      },
+      "revised_requirements": {
+        "source": "science_revised",
+        "separate_file_each_figure": true,
+        "nonvector_line_art_min_dpi": 300,
+        "grayscale_color_min_dpi": 300,
+        "vector_formats_in_preference_order": [
+          "PDF",
+          "EPS",
+          "AI"
+        ],
+        "raster_format": "TIFF",
+        "mixed_vector_raster": [
+          "PDF",
+          "EPS"
+        ],
+        "prohibited": "修回图件不得嵌入Word或以PowerPoint文件交付；不得通过上采样补造分辨率",
+        "original_images": "保留原生格式原图，供生产阶段查验"
+      },
+      "implementation_recommendation": {
+        "classification": "本Skill的保守工作建议，非新增期刊硬性要求",
+        "text": "记录网页与PDF两个尺寸来源；按编辑标注/修回通知确定最终尺寸。线宽可选≥0.5 pt同时满足两来源。以原生矢量及可编辑文字交付，遇提交格式冲突按编辑通知。"
+      }
+    },
+    {
+      "journal": "Science Advances",
+      "status": "VERIFIED_WITH_INTERNAL_RESOLUTION_CONFLICT",
+      "source": "sciadv_pdf_2026",
+      "initial_submission_note": {
+        "source": "sciadv_authors",
+        "text": "初稿不要求统一格式；图表在首次提及时嵌入且有图注。修回须遵循所链接图件指南。"
+      },
+      "requirements": {
+        "pages": "p1–3 / p7",
+        "final_width_mm": {
+          "one_column": 90,
+          "two_columns": 184,
+          "intermediate_max": 144
+        },
+        "page_depth_limit_cm": 22.75,
+        "font": "Myriad或等价无衬线",
+        "labels_default_points": 8,
+        "labels_min_points": 6,
+        "panels": "大写9 pt粗体，按从左到右/从上到下的逻辑顺序",
+        "line_min_final_points": 0.28,
+        "color_mode": "RGB",
+        "raster_photo_or_gray_min_dpi": 300,
+        "embedded_raster_min_dpi": 300,
+        "raster_black_white_line_art_min_dpi": 1200,
+        "combined_line_and_raster_min_dpi": 300,
+        "preferred_vector_formats": [
+          "AI",
+          "PDF"
+        ],
+        "raster_line_formats": [
+          "TIFF",
+          "PNG"
+        ],
+        "raster_photo_gray_color_formats": [
+          "TIFF",
+          "JPEG"
+        ],
+        "separate_complete_figure_file": true,
+        "figure_must_match_combined_pdf": true,
+        "prohibited": "图件不得嵌入Word/PPT文件，也不得从Word/PPT转换成可接受格式；不将线图/文字栅格化；不通过上采样补造质量"
+      },
+      "recommendations": {
+        "max_artwork_depth_cm": 19.9,
+        "max_depth_reason": "为双栏图注留空间；7.8 in为建议值，9 in为页深限制",
+        "layout": "压缩无意义留白、面板靠近、避免重复轴标签；图内不放整图标题",
+        "accessibility": "避开红绿组合与暗蓝/黄组合或相近色；无法避开红绿时叠加形状/纹理与明显明暗差；通常白背景，深色图像用白字/比例尺"
+      },
+      "implementation_recommendation": {
+        "classification": "本Skill建议，非期刊新增要求",
+        "text": "优先保留矢量线图；位图黑白线图按明确的1200 dpi条款准备，同时提示PDF的降采样冲突并由生产编辑确认。不得擅自将全部图件统一为600 dpi或宣称低于300 dpi常规合格。"
+      }
+    }
+  ],
+  "science_conflicts": [
+    {
+      "journal": "Science",
+      "issue": "最终栏宽",
+      "claims": [
+        {
+          "source": "science_initial / science_revised",
+          "value": "57/121/184 mm (1/2/3栏)"
+        },
+        {
+          "source": "science_pdf_2025 p2",
+          "value": "90/183 mm (1/2栏)；括号7.25 in也有换算/舍入不一致"
+        }
+      ],
+      "resolution": "未核实哪个版本覆盖另一个；按编辑给定终尺寸，公开记录两种来源"
+    },
+    {
+      "journal": "Science",
+      "issue": "终尺寸线宽",
+      "claims": [
+        {
+          "source": "science_initial",
+          "value": "≥0.5 pt"
+        },
+        {
+          "source": "science_pdf_2025 p1",
+          "value": "≥0.28 pt"
+        }
+      ],
+      "resolution": "不伪造统一官方下限；Skill默认0.5 pt可同时满足"
+    },
+    {
+      "journal": "Science",
+      "issue": "图件格式",
+      "claims": [
+        {
+          "source": "science_revised",
+          "value": "矢量PDF/EPS/AI；位图TIFF；混合PDF/EPS"
+        },
+        {
+          "source": "science_pdf_2025 p1",
+          "value": "矢量AI/vector EPS/PDF；位图layered PSD/PNG/TIFF；R绘图保存vector SVG"
+        }
+      ],
+      "resolution": "以修回编辑通知/提交系统为准，SVG示例不是全系列统一投稿许可"
+    },
+    {
+      "journal": "Science Advances",
+      "issue": "分辨率",
+      "claims": [
+        {
+          "source": "sciadv_pdf_2026 p1 / p3",
+          "value": "黑白位图线图≥1200 dpi；灰度/彩图与混合图≥300 dpi"
+        },
+        {
+          "source": "sciadv_pdf_2026 p3",
+          "value": ">600 dpi降采样到600，建议≤600 dpi"
+        },
+        {
+          "source": "sciadv_pdf_2026 p6",
+          "value": "建议300–600 dpi；清晰不像素化时可能接受<300 dpi"
+        }
+      ],
+      "resolution": "官方文档内部未解释；保留明确1200/300门槛及冲突，不将个案例外当常规要求"
+    }
+  ],
+  "cell_journal_specific": [
+    {
+      "journal": "Cell",
+      "article_type": "必须由用户或稿件确定",
+      "status": "unknown",
+      "source_urls": [
+        "https://www.cell.com/cell/author-resources",
+        "https://www.cell.com/information-for-authors/figure-guidelines"
+      ],
+      "retrieved_on": "2026-10-09",
+      "final_width_mm": null,
+      "final_height_mm": null,
+      "font_family": null,
+      "font_size_pt": null,
+      "line_width_pt": null,
+      "color_mode": null,
+      "panel_label_rule": null,
+      "accepted_vector_formats": null,
+      "raster_resolution_dpi": null,
+      "reason": "当前官方正文获取失败。没有将第三方存在冲突的85/170/174 mm、Arial/Avenir、字号或线宽摘要晋升为已验证要求。"
+    },
+    {
+      "journal": "Cell Reports",
+      "article_type": "必须由用户或稿件确定",
+      "status": "unknown",
+      "source_urls": [
+        "https://www.cell.com/cell-reports/author-resources",
+        "https://www.cell.com/information-for-authors/figure-guidelines"
+      ],
+      "retrieved_on": "2026-10-09",
+      "final_width_mm": null,
+      "final_height_mm": null,
+      "font_family": null,
+      "font_size_pt": null,
+      "line_width_pt": null,
+      "color_mode": null,
+      "panel_label_rule": null,
+      "accepted_vector_formats": null,
+      "raster_resolution_dpi": null,
+      "reason": "当前官方正文获取失败。不能据Elsevier通用规则或Cell名称推定本刊及所有文章类型完全相同。"
+    }
+  ],
+  "elsevier_general_claims": [
+    {
+      "id": "journal_override",
+      "status": "requirement",
+      "scope": "Elsevier通用指南的适用边界",
+      "claim_zh": "应检查具体期刊作者指南；部分刊物有通用指南之外的特殊要求。",
+      "source_url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-sizing",
+      "source_section": "Sizing of artwork",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "elsevier_width_examples",
+      "status": "recommendation",
+      "scope": "Elsevier通用尺寸示例，不能作为Cell/Cell Reports最终尺寸",
+      "claim_zh": "通用表格给出的单栏、1.5栏、双栏示例宽度分别为90、140、190 mm；并未核实为Cell尺寸。",
+      "values": {
+        "single_column": 90,
+        "one_and_half_column": 140,
+        "double_column": 190
+      },
+      "unit": "mm",
+      "source_url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-sizing",
+      "source_section": "Number of pixels versus resolution and print size, for bitmap images",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "elsevier_font_size_rule_of_thumb",
+      "status": "recommendation",
+      "scope": "Elsevier通用经验规则，非Cell专属硬性字号",
+      "claim_zh": "最终印刷普通文字7 pt、上下标不小于6 pt，原文明说这是经验规则而非严格规则。",
+      "values": {
+        "normal_text": 7,
+        "subscript_superscript_min": 6
+      },
+      "unit": "pt",
+      "source_url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-sizing",
+      "source_section": "Sizing of artwork",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "elsevier_font_family",
+      "status": "recommendation",
+      "scope": "Elsevier通用指南",
+      "claim_zh": "推荐Arial或Helvetica、Courier、Symbol、Times或Times New Roman；不是只允许Arial。",
+      "values": [
+        "Arial",
+        "Helvetica",
+        "Courier",
+        "Symbol",
+        "Times",
+        "Times New Roman"
+      ],
+      "source_url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-overview",
+      "source_section": "Font information",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "elsevier_vector",
+      "status": "recommendation",
+      "scope": "Elsevier通用矢量图导出",
+      "claim_zh": "EPS是矢量图的优先格式；PDF也可用于提交。应检查导出过程避免下采样。",
+      "values": [
+        "EPS",
+        "PDF"
+      ],
+      "source_url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-overview",
+      "source_section": "Recommended file formats / Images from other applications",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "elsevier_eps_font_embedding",
+      "status": "requirement",
+      "scope": "Elsevier通用EPS矢量与混合图",
+      "claim_zh": "EPS矢量及混合图须嵌入字体。纯矢量内容与位图分辨率应分开检查。",
+      "source_url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-types",
+      "source_section": "Line art — EPS (vector based) / Combination art — EPS format",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "elsevier_eps_stroke_range",
+      "status": "requirement",
+      "scope": "Elsevier通用EPS矢量及EPS混合图；不是Cell专属范围",
+      "claim_zh": "该页面Requirements列出的线宽范围是0.10–1.5 pt。",
+      "values": {
+        "min": 0.1,
+        "max": 1.5
+      },
+      "unit": "pt",
+      "source_url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-types",
+      "source_section": "Line art — EPS (vector based) / Combination art — EPS format",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "elsevier_raster_resolution",
+      "status": "requirement",
+      "scope": "Elsevier通用位图；分辨率须按最终物理尺寸计算",
+      "claim_zh": "灰度/彩色半色调最低300 dpi；TIFF/JPEG混合图500 dpi；纯黑白位图线稿最低1000 dpi，极细线稿1200 dpi。灰度图与纯黑白位图不能混称。",
+      "values": {
+        "grayscale_halftone_min": 300,
+        "color_halftone_min": 300,
+        "combination": 500,
+        "binary_bitmap_line_art_min": 1000,
+        "very_fine_line_art": 1200
+      },
+      "unit": "dpi",
+      "source_url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-types",
+      "source_section": "Line art — TIFF (bitmap) / Grayscale images / RGB images / Combination art",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "elsevier_resolution_math",
+      "status": "requirement",
+      "scope": "位图数学关系，适用于最终尺寸检查",
+      "claim_zh": "像素数=分辨率(dpi)×最终尺寸(inch)；1 inch=72 pt。改变DPI标签不会增加真实像素。末句是该公式的直接推论。",
+      "formula": "pixels = dpi * print_size_inch",
+      "unit": "px / dpi / inch / pt",
+      "inference": "改变DPI标签不会增加真实像素",
+      "source_url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-sizing",
+      "source_section": "Number of pixels versus resolution and print size, for bitmap images",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "elsevier_rgb",
+      "status": "recommendation",
+      "scope": "Elsevier通用彩色图；具体期刊另有规定时须服从其规定",
+      "claim_zh": "首选RGB色彩空间。",
+      "value": "RGB",
+      "source_url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-formats-checklist",
+      "source_section": "Checklist",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "elsevier_color_accessibility",
+      "status": "recommendation",
+      "scope": "Elsevier通用可访问性建议",
+      "claim_zh": "使用色盲友好且高对比的配色；红绿荧光图可将红替换为洋红，并用形状、位置、线型提供额外区分。",
+      "source_url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions",
+      "source_section": "Creating accessible figures for all types of color vision",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "elsevier_separate_figures_captions",
+      "status": "requirement",
+      "scope": "Elsevier通用提交检查；具体期刊可另有规定",
+      "claim_zh": "图件通常单独提交并按正文引用顺序编号；图注随投稿提交为文本。面板字母大小写没有在此处规定。",
+      "source_url": "https://www.elsevier.com/about/policies-and-standards/author/artwork-and-media-instructions/artwork-formats-checklist",
+      "source_section": "Checklist / Figure captions",
+      "retrieved_on": "2026-10-09"
+    }
+  ],
+  "statistical_visualization_recommendations": [
+    {
+      "id": "show_raw_small_samples",
+      "status": "recommendation",
+      "claim_zh": "小样本连续数据优先显示全部原始点；只画均值柱与误差条会隐藏异常值、分布及样本量。",
+      "scope": "论文方法建议，不是Cell投稿硬性规则；不适用于把计数/比例柱图一概禁止",
+      "source_url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128",
+      "source_sections": [
+        "Introduction",
+        "Recommendations for a New Data Presentation Paradigm"
+      ],
+      "doi": "10.1371/journal.pbio.1002128",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "boxplots_and_sample_size",
+      "status": "recommendation",
+      "claim_zh": "箱线图可展示分布，但数据太少时其汇总难解释，应优先原始点。箱线须的算法与异常点处理应明确。后一句为Skill实施建议，不是该论文的期刊要求。",
+      "scope": "依据样本量选择图型；没有单一通用最低n阈值",
+      "inference": "箱线须算法及异常点处理应在图注中明确",
+      "source_url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128",
+      "source_sections": [
+        "Summary Statistics Are Only Meaningful When There Are Enough Data to Summarize",
+        "S2 Fig legend"
+      ],
+      "doi": "10.1371/journal.pbio.1002128",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "paired_design",
+      "status": "recommendation",
+      "claim_zh": "配对或匹配数据用对应点连接线展示配对关系；必要时另画个体差值分布，不能用独立组外观隐藏研究设计。",
+      "scope": "连接仅用于真实配对ID；不能人为把独立观测配对",
+      "source_url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002128",
+      "source_sections": [
+        "Fig 2",
+        "Introduction"
+      ],
+      "doi": "10.1371/journal.pbio.1002128",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "independent_unit_superplot",
+      "status": "recommendation",
+      "claim_zh": "嵌套重复数据同时展示单次观测与各独立实验汇总值，并以颜色/形状区分实验。对实验可重复性的推断须以独立生物学重复作为分析单位，不能把同一实验内的细胞全部当独立n。",
+      "scope": "SuperPlots建议；统计模型须匹配实际研究设计",
+      "source_url": "https://rupress.org/jcb/article/219/6/e202001064/151717/SuperPlots-Communicating-reproducibility-and",
+      "source_sections": [
+        "What population is being sampled?",
+        "Communicating variability with SuperPlots"
+      ],
+      "doi": "10.1083/jcb.202001064",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "report_n_and_calculation",
+      "status": "recommendation",
+      "claim_zh": "图或图注列出独立实验数量，说明均值和统计检验怎样计算。显示全部点并不能自动消除伪重复。",
+      "scope": "原始方法论文建议；n须说明代表细胞、样本、动物或独立实验",
+      "source_url": "https://rupress.org/jcb/article/219/6/e202001064/151717/SuperPlots-Communicating-reproducibility-and",
+      "source_sections": [
+        "Communicating variability with SuperPlots",
+        "Error bars that communicate reproducibility"
+      ],
+      "doi": "10.1083/jcb.202001064",
+      "retrieved_on": "2026-10-09"
+    },
+    {
+      "id": "identify_error_bar",
+      "status": "recommendation",
+      "claim_zh": "图注明确误差条类型，如SD、SEM或95% CI；SD描述观测离散，SEM/CI表达估计不确定性，不能互换名称。",
+      "scope": "原始方法论文建议；没有数据/计算依据时不得自动生成误差条",
+      "source_url": "https://rupress.org/jcb/article/177/1/7/34602/Error-bars-in-experimental-biology",
+      "supporting_full_text_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2064100/",
+      "source_sections": [
+        "Abstract",
+        "What do error bars tell you?"
+      ],
+      "doi": "10.1083/jcb.200611141",
+      "retrieved_on": "2026-10-09"
+    }
+  ],
+  "not_verified": [
+    "未得到Science网页与2025 PDF在栏宽/线宽冲突中的官方优先级说明。",
+    "未得到Science Advances 1200 dpi与600 dpi降采样冲突的官方解释。",
+    "未核验Science Immunology、Robotics、Signaling、Translational Medicine或SPJ其他刊，不外推这些数值。",
+    "这些来源未核验一套适用于两刊的通用字体嵌入技术规则；Science PDF明确要求保留可编辑文字并嵌入链接图像。",
+    "未发现AAAS官方按全部数据类型选图表的统一教程；具体选择须另外标明方法学建议来源。",
+    "Cell与Cell Reports当前各文章类型的最终宽度及最大高度",
+    "Cell当前字体族及字号，包括Arial/Avenir说法冲突",
+    "Cell当前0.5–1.5 pt线宽说法的官方正文",
+    "Cell及Cell Reports当前面板字母大小写、字重、位置、面板字母字号及间距",
+    "Cell及Cell Reports当前主文图矢量格式、位图最低分辨率、最大文件大小",
+    "2026年具体期刊对图形摘要的必需性及当前技术规格"
+  ],
+  "copyright_note": "Links and independent summaries only; no publisher PDF, paper figure or proprietary software is redistributed."
+}
