@@ -9,24 +9,49 @@
 
 ![从数据到可编辑 Origin 工程和 PowerPoint 的流程示意](docs/images/overview.svg)
 
-[中文使用指南](docs/中文使用指南.md) · [Nature / Science / Cell 选图指南](docs/CNS期刊风格与选图指南.md) · [English](README.en.md) · [下载 Skill v0.2.0](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/raw/refs/heads/main/dist/origin-scientific-plotting-skill-v0.2.0.zip) · [真实验证范围](docs/VALIDATION.md)
+[中文使用指南](docs/中文使用指南.md) · [EPSC / 十动作 RC 图库](docs/research-gallery/README.md) · [Nature / Science / Cell 选图指南](docs/CNS期刊风格与选图指南.md) · [English](README.en.md) · [下载 Skill v0.2.1](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/raw/refs/heads/main/dist/origin-scientific-plotting-skill-v0.2.1.zip) · [真实验证范围](docs/VALIDATION.md)
 
 如果这个工具能帮你整理论文图，欢迎点一个 **⭐ Star**，方便下次找到。使用问题和参考图适配需求可以提交 [Issue](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/issues)。
 
 ## 先看实际输出
 
-下列示例使用仓库中的**合成演示数据，由 Origin 原生绘制并导出**。你的原始数据不会因为绘图被拟合、平滑或筛选。
+下列研究图使用**作者公开的 EPSC 实测曲线及既有模型结果，由 Origin 原生绘制并导出**。十动作分类使用公开 UTD-MHAD 动作信号驱动器件模型进行 RC 仿真。每张图均有数据来源、中文说明和可编辑工程；绘图过程保留原来的数值。
 
 <table>
   <tr>
-    <td width="50%"><img src="docs/images/response.png" alt="Origin 原生曲线和散点演示" width="100%" /></td>
-    <td width="50%"><img src="docs/images/confusion.png" alt="Origin 行归一化混淆矩阵演示，每格标注数值，未测试行显示为缺失" width="100%" /></td>
+    <td width="50%"><img src="docs/research-gallery/03_ten_pulse_response.png" alt="十次间隔刺激的已有实测 EPSC 与冻结模型，Origin 原生曲线和散点" width="100%" /></td>
+    <td width="50%"><img src="docs/research-gallery/01_ten_actions_light.png" alt="十动作 RC 仿真混淆矩阵：光照模型与 Softmax，319 条留出预测，每格标值" width="100%" /></td>
   </tr>
   <tr>
-    <td align="center">曲线 / 散点：统一字体、图框与图例</td>
-    <td align="center">混淆矩阵：每格标值，保留未测试状态</td>
+    <td align="center">十次刺激 EPSC：已有实测散点与冻结模型</td>
+    <td align="center">十动作 RC：319 条留出预测，逐行归一化至 0–1</td>
   </tr>
 </table>
+
+### 更多研究图：累积、长尾与储备池状态
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/research-gallery/04_light_dark_accumulation.png" alt="相同四十次刺激下的光暗模型电流累积与恢复" width="100%" /></td>
+    <td width="50%"><img src="docs/research-gallery/05_hundred_pulse_tail.png" alt="100 次刺激后的实测与冻结模型恢复长尾，对数纵轴" width="100%" /></td>
+  </tr>
+  <tr>
+    <td align="center">光暗累积：同一 40 次刺激，两个冻结模型</td>
+    <td align="center">100 次 EPSC：对数轴展示实测长尾与预测差异</td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/research-gallery/07_historical_recovery_deviation.png" alt="历史模型的100次刺激恢复偏差：约10秒处L3相对电流误差负33.2%" width="100%" /></td>
+    <td width="50%"><img src="docs/research-gallery/02_ten_actions_dark.png" alt="对应暗态模型的十动作 RC 仿真混淆矩阵，每格标值" width="100%" /></td>
+  </tr>
+  <tr>
+    <td align="center">历史恢复偏差：约 10 s 处 L3 误差 −33.2%</td>
+    <td align="center">对应暗态十动作矩阵：相同任务与读取精度</td>
+  </tr>
+</table>
+
+![储备池状态：40个读取时刻、150条输入支路，共6000个模拟电流](docs/research-gallery/06_reservoir_state_map.png)
+
+**[七张图的中文说明、PNG / PDF / EMF / OPJU 下载](docs/research-gallery/README.md)** · [公开绘图数据与设置](examples/research-gallery/figures.json)。100 次刺激图是恢复偏差诊断，旧版 L3/C3 图单独注明历史模型；它们展示模型的适用边界。
 
 | 你需要什么 | 可以得到什么 |
 |---|---|
@@ -61,7 +86,7 @@
 
 > 从 https://github.com/jiahehu2000-lgtm/origin-scientific-plotting 安装 Skill，路径是 `skills/origin-scientific-plotting`。
 
-也可直接下载 [v0.2.0 Skill ZIP](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/raw/refs/heads/main/dist/origin-scientific-plotting-skill-v0.2.0.zip)，将其中的 `origin-scientific-plotting` 文件夹放到 `~/.codex/skills/`。依赖仍需安装；完整步骤见[中文指南](docs/中文使用指南.md)，版本说明见 [Releases](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/releases/latest)。
+也可直接下载 [v0.2.1 Skill ZIP](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/raw/refs/heads/main/dist/origin-scientific-plotting-skill-v0.2.1.zip)，将其中的 `origin-scientific-plotting` 文件夹放到 `~/.codex/skills/`。依赖仍需安装；完整步骤见[中文指南](docs/中文使用指南.md)，版本说明见 [Releases](https://github.com/jiahehu2000-lgtm/origin-scientific-plotting/releases/latest)。
 
 ### 3. 给数据和要求
 

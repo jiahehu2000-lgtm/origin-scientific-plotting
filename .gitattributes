@@ -6,3 +6,7 @@
 *.yml text eol=lf
 *.csv text eol=lf
 *.png binary
+# Research CSVs and the verified specification are frozen byte-for-byte.
+# Line-ending conversion would invalidate their published source hashes.
+examples/research-gallery/*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+examples/research-gallery/data/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

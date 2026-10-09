@@ -16,3 +16,6 @@ results/
 _validation/
 !docs/journal-gallery/*.pdf
 !docs/journal-gallery/*.opju
+!docs/research-gallery/*.pdf
+!docs/research-gallery/*.opju
+!docs/research-gallery/*.emf

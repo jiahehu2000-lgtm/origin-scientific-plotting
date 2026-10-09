@@ -9,6 +9,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'skills/origin-scientific-plotting/scripts'))
 from plot_spec import load_spec, normalize_rows, validate_figure, new_directory, ensure_sources_unchanged, sha256
+from origin_plot import colorbar_tick_decimals
 
 class SpecTests(unittest.TestCase):
     def setUp(self):
@@ -76,6 +77,15 @@ class SpecTests(unittest.TestCase):
             p.write_text(json.dumps(doc))
             with self.assertRaises(ValueError):
                 load_spec(p)
+
+    def test_fractional_colorbar_ticks_are_not_rounded_into_duplicates(self):
+        digits = colorbar_tick_decimals(0, 3)
+        labels = [f'{i * 0.6:.{digits}f}' for i in range(6)]
+        self.assertEqual(labels, ['0.0', '0.6', '1.2', '1.8', '2.4', '3.0'])
+        self.assertEqual(len(set(labels)), 6)
+        self.assertEqual(colorbar_tick_decimals(0, 1), 1)
+        self.assertEqual(colorbar_tick_decimals(0, 100), 0)
+        self.assertGreaterEqual(colorbar_tick_decimals(0.01, 0.04), 3)
 
 if __name__ == '__main__':
     unittest.main()

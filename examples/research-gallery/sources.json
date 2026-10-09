@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "published_on": "2026-10-09",
+  "data_scope": "Author-released frozen device traces and public-input RC simulation outputs. No phone/watch recordings or proprietary Origin software.",
+  "processing": "Source CSV bytes copied without alteration. Only explicit row normalization for confusion matrices; other numerical arrays unchanged. No fitting, smoothing, classifier training, new inference or sample selection.",
+  "files": [
+    {
+      "path": "data/ten_actions_light_counts.csv",
+      "sha256": "2e719f1b0e2ea19742e4f8038b07e70a9867c6c2041011e39f0cf0b38643cc0d",
+      "source_basename": "LINEAR_SOFTMAX_LIGHT_混淆计数.csv"
+    },
+    {
+      "path": "data/ten_actions_dark_counts.csv",
+      "sha256": "2126cb9da3d3317e8f5c7282bed9607636586e5b06bd86157e958af9bcc37c22",
+      "source_basename": "LINEAR_SOFTMAX_DARK_混淆计数.csv"
+    },
+    {
+      "path": "data/ten_pulse_measured.csv",
+      "sha256": "5e418128a9d2f0530efa0b378a47f47069f1809aea7fde7f644fa69709a3f1a1",
+      "source_basename": "Data001.csv"
+    },
+    {
+      "path": "data/ten_pulse_model.csv",
+      "sha256": "5adf1b0562c7f11c4625815fb961eea195f2b2cb1036f3c381958890bd2b891b",
+      "source_basename": "Data002.csv"
+    },
+    {
+      "path": "data/forty_pulse_light.csv",
+      "sha256": "704c407a4f67e3c112fbaaf93996d0816353c74829cbec82a2b4b324437bbb86",
+      "source_basename": "Data001.csv"
+    },
+    {
+      "path": "data/forty_pulse_dark.csv",
+      "sha256": "3187c552bee12c1719ef049dc1c0111c965cffe17546e86e4ad1dfea605291b4",
+      "source_basename": "Data002.csv"
+    },
+    {
+      "path": "data/hundred_pulse_measured.csv",
+      "sha256": "dd82fe8aab1486782a5fe269c6544c5811521e6f6b8debb7bc7e429e25c3c9c9",
+      "source_basename": "Data001.csv"
+    },
+    {
+      "path": "data/hundred_pulse_model.csv",
+      "sha256": "1dae4b979d861552842c21a14aab9e31e526fa630771dec7cb8197b65457100a",
+      "source_basename": "Data002.csv"
+    },
+    {
+      "path": "data/light_reservoir_states.csv",
+      "sha256": "51b1a4cae7d7c1404388b016f162dd83b0ebc8abfff0ef7e0dddedeb73f8ad90",
+      "source_basename": "Matrix01.csv"
+    },
+    {
+      "path": "data/historical_hundred_measured.csv",
+      "sha256": "18e71f55e4bb55aa2c23841be69b9212b08cfc1d8772c14decd8a1db4d8f8988",
+      "source_basename": "Data001.csv"
+    },
+    {
+      "path": "data/historical_hundred_l3.csv",
+      "sha256": "ce2655cea8bc825cee6b0ac4b3bf4675af7089dec87006b07509fbf1719e3982",
+      "source_basename": "Data002.csv"
+    },
+    {
+      "path": "data/historical_hundred_c3.csv",
+      "sha256": "c6faea3a9209108f957f8a80dd0ed70f7c0dc085b30a0cbb8cfec86c47400b0e",
+      "source_basename": "Data003.csv"
+    }
+  ],
+  "matrix_class_names": [
+    {
+      "class": 1,
+      "name": "右臂向左划"
+    },
+    {
+      "class": 2,
+      "name": "右臂向右划"
+    },
+    {
+      "class": 3,
+      "name": "右手挥手"
+    },
+    {
+      "class": 4,
+      "name": "双手前拍"
+    },
+    {
+      "class": 5,
+      "name": "右臂投掷"
+    },
+    {
+      "class": 6,
+      "name": "胸前交叉双臂"
+    },
+    {
+      "class": 7,
+      "name": "投篮"
+    },
+    {
+      "class": 8,
+      "name": "右手画X"
+    },
+    {
+      "class": 9,
+      "name": "右手顺时针画圆"
+    },
+    {
+      "class": 10,
+      "name": "右手逆时针画圆"
+    }
+  ],
+  "public_input_dataset": "UTD-MHAD inertial records, actions 1-10, 8 subjects, 319 usable trials",
+  "missing_input_trial": "a8_s1_t4_inertial.mat",
+  "method_repository": "https://github.com/jiahehu2000-lgtm/photo-synapse-rc",
+  "classification": {
+    "LIGHT": {
+      "total": 319,
+      "correct": 287,
+      "pooled_accuracy_pct": 89.96865203761756,
+      "subject_mean_accuracy_pct": 89.94391025641026,
+      "row_sums": [
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        31,
+        32,
+        32
+      ],
+      "reconstructed_from_outer_predictions_exact_match": true
+    },
+    "DARK": {
+      "total": 319,
+      "correct": 209,
+      "pooled_accuracy_pct": 65.51724137931035,
+      "subject_mean_accuracy_pct": 65.52083333333333,
+      "row_sums": [
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        31,
+        32,
+        32
+      ],
+      "reconstructed_from_outer_predictions_exact_match": true
+    }
+  },
+  "protocol": {
+    "evaluation": "8outerleave-one-subject-out;3innergroupedsubjectfolds;train-onlyinput/featurestandardization",
+    "Softmax": "Multinomial10classlinearlogisticregression,L2crossentropy,unpenalizedintercept,LBFGS;not10independentbinarylogisticfits",
+    "encoding": "Fixed150thresholdstreams;40bins;timeXOR,firstslotzero",
+    "ADC": {
+      "bits": 2,
+      "fullscale_nA": 3,
+      "rule": "Nearest0,1,2,3nA"
+    },
+    "features": 6000,
+    "timing_s": {
+      "slot": 0.13906,
+      "delay": 0.07416
+    }
+  },
+  "historical_error": {
+    "time_s": 10.008392334000007,
+    "measured_nA": 0.4023318206370001,
+    "L3_prediction_nA": 0.26893124091100007,
+    "relative_prediction_error_percent": -33.15685533269301,
+    "matches_display_minus33point2_percent": true
+  },
+  "figure_notes": [
+    {
+      "id": "01_ten_actions_light",
+      "caption": "LIGHT: existing public UTD-MHAD 10-action device-model RC simulation, Softmax readout, 2-bit shared 0-3 nA quantization, 8 held-out subjects. 319 out-of-fold predictions. Row-normalized counts; class 8 has 31 records, all other classes have 32. Not a hardware or phone/watch RC experiment."
+    },
+    {
+      "id": "02_ten_actions_dark",
+      "caption": "DARK: existing public UTD-MHAD 10-action device-model RC simulation, Softmax readout, 2-bit shared 0-3 nA quantization, 8 held-out subjects. 319 out-of-fold predictions. Row-normalized counts; class 8 has 31 records, all other classes have 32. Not a hardware or phone/watch RC experiment."
+    },
+    {
+      "id": "03_ten_pulse_response",
+      "caption": "Existing non-stretched light-state device measurement and frozen-model replay. Ten events, 175 readings; prior calibration protocol, not new independent measurements."
+    },
+    {
+      "id": "04_light_dark_accumulation",
+      "caption": "Existing frozen light and dark device-model simulations driven by the same 40 unit events, interval 0.13906 s, zero initial state, 1039 points per condition. Unquantized model currents; not new paired physical measurements."
+    },
+    {
+      "id": "05_hundred_pulse_tail",
+      "caption": "Existing measured recovery after 100 events and frozen-model prediction. 1577 points each. Diagnostic protocol excluded from model fitting. All supplied positive plotting points and model values retained; extended logarithmic limits show the complete model tail. The frozen model underestimates the slow recovery."
+    },
+    {
+      "id": "06_reservoir_state_map",
+      "caption": "Existing unquantized light-state reservoir-current simulation. 40 read steps by 150 input branches, all 6000 states shown. Rows are read steps in chronological top-to-bottom order; columns are branches. Fixed 0-3 nA scale. This map is not a confusion matrix or a hardware array image."
+    },
+    {
+      "id": "07_historical_recovery_deviation",
+      "caption": "Historical 100-pulse recovery diagnostic from the earlier L3/C3 modeling comparison. Existing measured, Linear 3-state and Coupled-saturation traces, 1563 points each. At the nearest reading to 10 s (10.008392334 s), L3 relative current error is -33.1568553%, displayed as -33.2%. These are historical candidates, not the final RC model or a classification metric."
+    }
+  ]
+}

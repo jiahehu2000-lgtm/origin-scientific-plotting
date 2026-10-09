@@ -4,7 +4,15 @@ A reusable **Codex skill for scientific plotting through the installed Origin ap
 
 [中文首页](README.md) · [中文使用指南](docs/中文使用指南.md) · [Nature / Science / Cell plotting guide (Chinese)](docs/CNS期刊风格与选图指南.md)
 
-All bundled data are synthetic demonstrations. No private research data, fitted device parameters, or proprietary Origin software are included.
+The repository includes synthetic practice examples and a separately sourced [research gallery](docs/research-gallery/README.md): author-released EPSC traces and existing ten-action, device-model RC simulation outputs. Each example identifies its source and scope. Phone/watch recordings and proprietary Origin software are not included.
+
+## EPSC and ten-action RC research gallery
+
+![Ten-action RC simulation, light model and Softmax readout](docs/research-gallery/01_ten_actions_light.png)
+
+Seven native Origin figures cover light/dark ten-action confusion matrices, a measured ten-event response, paired forty-event model accumulation, a logarithmic hundred-event recovery diagnostic, a 40 × 150 reservoir-current map, and a historical recovery-deviation comparison. [Download PNG, vector PDF/EMF and editable OPJU](docs/research-gallery/README.md), or reproduce them from [frozen data/specifications](examples/research-gallery/figures.json).
+
+The confusion matrices use 319 public UTD-MHAD out-of-fold predictions from eight held-out subjects, the fixed device models and a Softmax readout with shared 2-bit quantization. These are model-driven simulations. The hundred-event traces expose a slow-recovery mismatch; the historical L3/C3 comparison is explicitly separate from the final RC model. Plotting did not refit models or rerun classifiers.
 
 ## Journal guidance and a native Origin gallery
 
@@ -98,11 +106,11 @@ Failure reports preserve diagnostics and do not become a complete manifest. Repo
 
 ## Preview
 
-These previews are created in Origin from the bundled synthetic data.
+These previews are created in Origin from the supplied frozen research data. Synthetic practice examples remain available separately in `examples/figures.json` and `examples/journal-gallery/figures.json`.
 
-![Synthetic response example](docs/images/response.png)
+![Measured ten-event EPSC and frozen model replay](docs/research-gallery/03_ten_pulse_response.png)
 
-![Synthetic normalized confusion matrix with an untested row](docs/images/confusion.png)
+![Row-normalized dark-model ten-action confusion matrix](docs/research-gallery/02_ten_actions_dark.png)
 
 ## Development checks
 

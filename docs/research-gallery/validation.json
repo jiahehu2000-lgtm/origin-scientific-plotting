@@ -1,0 +1,865 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-09",
+  "origin_internal_version": 9.8002,
+  "scope": "Native numerical/layout verification of frozen author-released data. No refitting or new RC inference; not a scientific model-validity certificate.",
+  "specification_sha256": "5834093ae7eb5d80d60f9e872ba0f27248e724dac56e09ac62204077e14ecd73",
+  "figures": [
+    {
+      "id": "01_ten_actions_light",
+      "caption": "LIGHT: existing public UTD-MHAD 10-action device-model RC simulation, Softmax readout, 2-bit shared 0-3 nA quantization, 8 held-out subjects. 319 out-of-fold predictions. Row-normalized counts; class 8 has 31 records, all other classes have 32. Not a hardware or phone/watch RC experiment.",
+      "native_origin": true,
+      "origin_internal_version": 9.8002,
+      "reopened_values_exact": true,
+      "native_layers": [
+        {
+          "layer": 1,
+          "frame": [
+            0.1007,
+            0.02986,
+            0.7292000000000001,
+            0.8469
+          ],
+          "font_pt": 10.0,
+          "axis_ranges": {
+            "x": [
+              0.5,
+              10.5
+            ],
+            "y": [
+              10.5,
+              0.5
+            ]
+          },
+          "visible_label_sides": [
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "layer": 2,
+          "frame": [
+            0.8548,
+            0.02986,
+            0.0181,
+            0.8469
+          ],
+          "font_pt": 10.0,
+          "axis_ranges": {
+            "x": [
+              0.0,
+              1.0
+            ],
+            "y": [
+              0.0,
+              1.0
+            ]
+          },
+          "visible_label_sides": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "native_text_objects": 101,
+      "compact_page": {
+        "page_before_inches": [
+          5.395,
+          4.995
+        ],
+        "page_after_inches": [
+          4.604755871446229,
+          3.963967935871744
+        ],
+        "crop_bbox_pixels": [
+          374,
+          256,
+          3136,
+          2632
+        ],
+        "font_sizes_preserved": true,
+        "physical_frame_tolerance_inches": 0.0025
+      },
+      "export_qa": {
+        "png_size": [
+          2761,
+          2376
+        ],
+        "content_bbox": [
+          35,
+          36,
+          2725,
+          2340
+        ],
+        "margins_pixels": [
+          35,
+          36,
+          36,
+          36
+        ],
+        "dpi_requested": 600,
+        "needs_visual_inspection": true,
+        "pdf_pages": 1,
+        "pdf_images": 0,
+        "pdf_vector_paths": 618,
+        "pdf_page_inches": [
+          4.611111111111111,
+          3.9722222222222223
+        ]
+      },
+      "exports": {
+        "png": {
+          "path": "01_ten_actions_light.png",
+          "sha256": "25d0d86cdb3aaaaeb3ff5218e1c4991e035eb21bf766409a9cf9bff2d204b039"
+        },
+        "pdf": {
+          "path": "01_ten_actions_light.pdf",
+          "sha256": "76c07d9d448f1196aafbac2f7b190cee3803fd180051632a016d26db12157d12"
+        },
+        "emf": {
+          "path": "01_ten_actions_light.emf",
+          "sha256": "8edf5fb08486f3b34db494c3b094bd1c8e2a5fe479482fa709ecdb6728696dc4"
+        },
+        "opju": {
+          "path": "01_ten_actions_light.opju",
+          "sha256": "66994087c4d4f37209286256452474c222b7b76e64fccbed7a6b74737b87bc4c"
+        }
+      },
+      "pdf_text_extractable": true,
+      "pdf_font_names": [
+        "ArialMT"
+      ],
+      "pdf_text_sizes_pt": [
+        10.0796
+      ],
+      "pdf_size_mm": [
+        117.122,
+        100.894
+      ],
+      "visual_inspection": "passed: native previews inspected; cell values, chronology, log ticks, legends, annotations, colorbar and margins checked"
+    },
+    {
+      "id": "02_ten_actions_dark",
+      "caption": "DARK: existing public UTD-MHAD 10-action device-model RC simulation, Softmax readout, 2-bit shared 0-3 nA quantization, 8 held-out subjects. 319 out-of-fold predictions. Row-normalized counts; class 8 has 31 records, all other classes have 32. Not a hardware or phone/watch RC experiment.",
+      "native_origin": true,
+      "origin_internal_version": 9.8002,
+      "reopened_values_exact": true,
+      "native_layers": [
+        {
+          "layer": 1,
+          "frame": [
+            0.1007,
+            0.02986,
+            0.7292000000000001,
+            0.8469
+          ],
+          "font_pt": 10.0,
+          "axis_ranges": {
+            "x": [
+              0.5,
+              10.5
+            ],
+            "y": [
+              10.5,
+              0.5
+            ]
+          },
+          "visible_label_sides": [
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "layer": 2,
+          "frame": [
+            0.8548,
+            0.02986,
+            0.0181,
+            0.8469
+          ],
+          "font_pt": 10.0,
+          "axis_ranges": {
+            "x": [
+              0.0,
+              1.0
+            ],
+            "y": [
+              0.0,
+              1.0
+            ]
+          },
+          "visible_label_sides": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "native_text_objects": 101,
+      "compact_page": {
+        "page_before_inches": [
+          5.395,
+          4.995
+        ],
+        "page_after_inches": [
+          4.604755871446229,
+          3.963967935871744
+        ],
+        "crop_bbox_pixels": [
+          374,
+          256,
+          3136,
+          2632
+        ],
+        "font_sizes_preserved": true,
+        "physical_frame_tolerance_inches": 0.0025
+      },
+      "export_qa": {
+        "png_size": [
+          2761,
+          2376
+        ],
+        "content_bbox": [
+          35,
+          36,
+          2725,
+          2340
+        ],
+        "margins_pixels": [
+          35,
+          36,
+          36,
+          36
+        ],
+        "dpi_requested": 600,
+        "needs_visual_inspection": true,
+        "pdf_pages": 1,
+        "pdf_images": 0,
+        "pdf_vector_paths": 618,
+        "pdf_page_inches": [
+          4.611111111111111,
+          3.9722222222222223
+        ]
+      },
+      "exports": {
+        "png": {
+          "path": "02_ten_actions_dark.png",
+          "sha256": "3bdca4ee48bd5c5a0422c626244de0318297eb3a97b7a8076ee066c06b5af4fe"
+        },
+        "pdf": {
+          "path": "02_ten_actions_dark.pdf",
+          "sha256": "bf7153d949ff5b54a1f6be59944ae52953e1bb5cab9db851af4ff716617f0f84"
+        },
+        "emf": {
+          "path": "02_ten_actions_dark.emf",
+          "sha256": "df8513c3cd30c994aa601fee1e364eece02779568a4c9c62a2b0d78589ad4877"
+        },
+        "opju": {
+          "path": "02_ten_actions_dark.opju",
+          "sha256": "7d4adc9b585f68135ab97a01b02593b9ebdc1a6af8f5368b325e4f41a24dca0a"
+        }
+      },
+      "pdf_text_extractable": true,
+      "pdf_font_names": [
+        "ArialMT"
+      ],
+      "pdf_text_sizes_pt": [
+        10.0796
+      ],
+      "pdf_size_mm": [
+        117.122,
+        100.894
+      ],
+      "visual_inspection": "passed: native previews inspected; cell values, chronology, log ticks, legends, annotations, colorbar and margins checked"
+    },
+    {
+      "id": "03_ten_pulse_response",
+      "caption": "Existing non-stretched light-state device measurement and frozen-model replay. Ten events, 175 readings; prior calibration protocol, not new independent measurements.",
+      "native_origin": true,
+      "origin_internal_version": 9.8002,
+      "reopened_values_exact": true,
+      "native_layers": [
+        {
+          "layer": 1,
+          "frame": [
+            0.1211,
+            0.03989,
+            0.8629000000000001,
+            0.7895
+          ],
+          "font_pt": 10.0,
+          "axis_ranges": {
+            "x": [
+              0.0,
+              13.0
+            ],
+            "y": [
+              0.0,
+              1.8
+            ]
+          },
+          "visible_label_sides": [
+            1,
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "native_text_objects": 2,
+      "compact_page": {
+        "page_before_inches": [
+          5.395,
+          4.095
+        ],
+        "page_after_inches": [
+          4.157951174289246,
+          3.0096585365853654
+        ],
+        "crop_bbox_pixels": [
+          433,
+          286,
+          2927,
+          2094
+        ],
+        "font_sizes_preserved": true,
+        "physical_frame_tolerance_inches": 0.0025
+      },
+      "export_qa": {
+        "png_size": [
+          2494,
+          1805
+        ],
+        "content_bbox": [
+          36,
+          37,
+          2458,
+          1770
+        ],
+        "margins_pixels": [
+          36,
+          37,
+          36,
+          35
+        ],
+        "dpi_requested": 600,
+        "needs_visual_inspection": true,
+        "pdf_pages": 1,
+        "pdf_images": 0,
+        "pdf_vector_paths": 196,
+        "pdf_page_inches": [
+          4.166666666666667,
+          3.013888888888889
+        ]
+      },
+      "exports": {
+        "png": {
+          "path": "03_ten_pulse_response.png",
+          "sha256": "7987e97a7c2ee37917d458ac3aba29674715c450f83fb8a4020548a78ad96b6b"
+        },
+        "pdf": {
+          "path": "03_ten_pulse_response.pdf",
+          "sha256": "fae249d6564b0cb7083f95ffe8c3210a28d40c981e3d21474b03af4b0cfd30c9"
+        },
+        "emf": {
+          "path": "03_ten_pulse_response.emf",
+          "sha256": "3ed9358b261092a73749fe32156865f1c2989f992564751d2d4f016ef5e4a368"
+        },
+        "opju": {
+          "path": "03_ten_pulse_response.opju",
+          "sha256": "3510c2c74c1dc4a491f5c6751bced541f21998a537f49e351d6b0bfa5ad267f5"
+        }
+      },
+      "pdf_text_extractable": true,
+      "pdf_font_names": [
+        "ArialMT"
+      ],
+      "pdf_text_sizes_pt": [
+        10.0785
+      ],
+      "pdf_size_mm": [
+        105.833,
+        76.553
+      ],
+      "visual_inspection": "passed: native previews inspected; cell values, chronology, log ticks, legends, annotations, colorbar and margins checked"
+    },
+    {
+      "id": "04_light_dark_accumulation",
+      "caption": "Existing frozen light and dark device-model simulations driven by the same 40 unit events, interval 0.13906 s, zero initial state, 1039 points per condition. Unquantized model currents; not new paired physical measurements.",
+      "native_origin": true,
+      "origin_internal_version": 9.8002,
+      "reopened_values_exact": true,
+      "native_layers": [
+        {
+          "layer": 1,
+          "frame": [
+            0.09419000000000001,
+            0.03936,
+            0.8737,
+            0.7898999999999999
+          ],
+          "font_pt": 10.0,
+          "axis_ranges": {
+            "x": [
+              0.0,
+              12.0
+            ],
+            "y": [
+              0.0,
+              4.0
+            ]
+          },
+          "visible_label_sides": [
+            1,
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "native_text_objects": 3,
+      "compact_page": {
+        "page_before_inches": [
+          5.395,
+          4.095
+        ],
+        "page_after_inches": [
+          4.106268541409147,
+          3.0079939024390243
+        ],
+        "crop_bbox_pixels": [
+          503,
+          287,
+          2966,
+          2094
+        ],
+        "font_sizes_preserved": true,
+        "physical_frame_tolerance_inches": 0.0025
+      },
+      "export_qa": {
+        "png_size": [
+          2463,
+          1805
+        ],
+        "content_bbox": [
+          36,
+          37,
+          2427,
+          1770
+        ],
+        "margins_pixels": [
+          36,
+          37,
+          36,
+          35
+        ],
+        "dpi_requested": 600,
+        "needs_visual_inspection": true,
+        "pdf_pages": 1,
+        "pdf_images": 0,
+        "pdf_vector_paths": 741,
+        "pdf_page_inches": [
+          4.111111111111111,
+          3.013888888888889
+        ]
+      },
+      "exports": {
+        "png": {
+          "path": "04_light_dark_accumulation.png",
+          "sha256": "0e800daccab1671d21e68b96866455b9f5ef8d23b21ec448ade1b78eaf708605"
+        },
+        "pdf": {
+          "path": "04_light_dark_accumulation.pdf",
+          "sha256": "8bd5f369e2696748b73163624ce8ee5f180a31ef755fadc41169b9e8d9799c78"
+        },
+        "emf": {
+          "path": "04_light_dark_accumulation.emf",
+          "sha256": "2e16f5659e393047f5122086fecaf2f293d92f0d68dbb9012e0cf88de682e627"
+        },
+        "opju": {
+          "path": "04_light_dark_accumulation.opju",
+          "sha256": "0bb398be71da7c73dc2f1e292dc6b19cb46a32dc3551a133ab52caa065d1d064"
+        }
+      },
+      "pdf_text_extractable": true,
+      "pdf_font_names": [
+        "ArialMT"
+      ],
+      "pdf_text_sizes_pt": [
+        10.079
+      ],
+      "pdf_size_mm": [
+        104.422,
+        76.553
+      ],
+      "visual_inspection": "passed: native previews inspected; cell values, chronology, log ticks, legends, annotations, colorbar and margins checked"
+    },
+    {
+      "id": "05_hundred_pulse_tail",
+      "caption": "Existing measured recovery after 100 events and frozen-model prediction. 1577 points each. Diagnostic protocol excluded from model fitting. All supplied positive plotting points and model values retained; extended logarithmic limits show the complete model tail. The frozen model underestimates the slow recovery.",
+      "native_origin": true,
+      "origin_internal_version": 9.8002,
+      "reopened_values_exact": true,
+      "native_layers": [
+        {
+          "layer": 1,
+          "frame": [
+            0.1588,
+            0.02311,
+            0.8024,
+            0.8033
+          ],
+          "font_pt": 10.0,
+          "axis_ranges": {
+            "x": [
+              0.0,
+              120.0
+            ],
+            "y": [
+              1e-08,
+              10.0
+            ]
+          },
+          "visible_label_sides": [
+            1,
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "native_text_objects": 3,
+      "compact_page": {
+        "page_before_inches": [
+          5.395,
+          4.095
+        ],
+        "page_after_inches": [
+          4.471381334981459,
+          2.9580548780487805
+        ],
+        "crop_bbox_pixels": [
+          309,
+          317,
+          2991,
+          2094
+        ],
+        "font_sizes_preserved": true,
+        "physical_frame_tolerance_inches": 0.0025
+      },
+      "export_qa": {
+        "png_size": [
+          2682,
+          1776
+        ],
+        "content_bbox": [
+          36,
+          37,
+          2646,
+          1741
+        ],
+        "margins_pixels": [
+          36,
+          37,
+          36,
+          35
+        ],
+        "dpi_requested": 600,
+        "needs_visual_inspection": true,
+        "pdf_pages": 1,
+        "pdf_images": 0,
+        "pdf_vector_paths": 1467,
+        "pdf_page_inches": [
+          4.472222222222222,
+          2.9583333333333335
+        ]
+      },
+      "exports": {
+        "png": {
+          "path": "05_hundred_pulse_tail.png",
+          "sha256": "82bc3be79995e120dfad852669b28069af37ed07a0a9547f3da3e5098327a83e"
+        },
+        "pdf": {
+          "path": "05_hundred_pulse_tail.pdf",
+          "sha256": "575278de90acf0780e5c6e9a6f3d66414c89d6ebf8f2f1550e134c703741e7c3"
+        },
+        "emf": {
+          "path": "05_hundred_pulse_tail.emf",
+          "sha256": "5463eb50088b26ca929c59ff5e9245bd71f33ab29553f40d2a1535be3f191b60"
+        },
+        "opju": {
+          "path": "05_hundred_pulse_tail.opju",
+          "sha256": "560439558bedffeda05fec2f163d3fd2809aef75fd098dc4e5eb39403b0bddc8"
+        }
+      },
+      "pdf_text_extractable": true,
+      "pdf_font_names": [
+        "ArialMT"
+      ],
+      "pdf_text_sizes_pt": [
+        6.9595,
+        10.0792
+      ],
+      "pdf_size_mm": [
+        113.594,
+        75.142
+      ],
+      "visual_inspection": "passed: native previews inspected; cell values, chronology, log ticks, legends, annotations, colorbar and margins checked"
+    },
+    {
+      "id": "06_reservoir_state_map",
+      "caption": "Existing unquantized light-state reservoir-current simulation. 40 read steps by 150 input branches, all 6000 states shown. Rows are read steps in chronological top-to-bottom order; columns are branches. Fixed 0-3 nA scale. This map is not a confusion matrix or a hardware array image.",
+      "native_origin": true,
+      "origin_internal_version": 9.8002,
+      "reopened_values_exact": true,
+      "native_layers": [
+        {
+          "layer": 1,
+          "frame": [
+            0.08182,
+            0.06568,
+            0.7704000000000001,
+            0.6475
+          ],
+          "font_pt": 10.0,
+          "axis_ranges": {
+            "x": [
+              0.5,
+              150.5
+            ],
+            "y": [
+              40.5,
+              0.5
+            ]
+          },
+          "visible_label_sides": [
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "layer": 2,
+          "frame": [
+            0.8786,
+            0.06568,
+            0.01906,
+            0.6475
+          ],
+          "font_pt": 10.0,
+          "axis_ranges": {
+            "x": [
+              0.0,
+              1.0
+            ],
+            "y": [
+              0.0,
+              3.0
+            ]
+          },
+          "visible_label_sides": [
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "native_text_objects": 1,
+      "compact_page": {
+        "page_before_inches": [
+          6.795,
+          3.695
+        ],
+        "page_after_inches": [
+          5.685,
+          1.8025608108108109
+        ],
+        "crop_bbox_pixels": [
+          500,
+          229,
+          3911,
+          1312
+        ],
+        "font_sizes_preserved": true,
+        "physical_frame_tolerance_inches": 0.0025
+      },
+      "export_qa": {
+        "png_size": [
+          3410,
+          1080
+        ],
+        "content_bbox": [
+          36,
+          36,
+          3375,
+          1043
+        ],
+        "margins_pixels": [
+          36,
+          36,
+          35,
+          37
+        ],
+        "dpi_requested": 600,
+        "needs_visual_inspection": true,
+        "pdf_pages": 1,
+        "pdf_images": 0,
+        "pdf_vector_paths": 6518,
+        "pdf_page_inches": [
+          5.694444444444445,
+          1.8055555555555556
+        ]
+      },
+      "exports": {
+        "png": {
+          "path": "06_reservoir_state_map.png",
+          "sha256": "fc69c310d132ee5a54405e2317ee2b0188efc6da8f4d899a811bc3bf534ec33a"
+        },
+        "pdf": {
+          "path": "06_reservoir_state_map.pdf",
+          "sha256": "5864e36a6e0b32a3da46a524f5ae5bd9390e632a0dd7af7153d74dca8c481342"
+        },
+        "emf": {
+          "path": "06_reservoir_state_map.emf",
+          "sha256": "d144de75eb25e610322aa9052631fe3d295882c575442e373ac62c3eee4e4ba1"
+        },
+        "opju": {
+          "path": "06_reservoir_state_map.opju",
+          "sha256": "07e493fe6d4deff38ed7c2861e80a7cfb818027d245471c31b16abb64f447e96"
+        }
+      },
+      "pdf_text_extractable": true,
+      "pdf_font_names": [
+        "ArialMT"
+      ],
+      "pdf_text_sizes_pt": [
+        10.0792
+      ],
+      "pdf_size_mm": [
+        144.639,
+        45.861
+      ],
+      "visual_inspection": "passed: native previews inspected; cell values, chronology, log ticks, legends, annotations, colorbar and margins checked"
+    },
+    {
+      "id": "07_historical_recovery_deviation",
+      "caption": "Historical 100-pulse recovery diagnostic from the earlier L3/C3 modeling comparison. Existing measured, Linear 3-state and Coupled-saturation traces, 1563 points each. At the nearest reading to 10 s (10.008392334 s), L3 relative current error is -33.1568553%, displayed as -33.2%. These are historical candidates, not the final RC model or a classification metric.",
+      "native_origin": true,
+      "origin_internal_version": 9.8002,
+      "reopened_values_exact": true,
+      "native_layers": [
+        {
+          "layer": 1,
+          "frame": [
+            0.11810000000000001,
+            0.03989,
+            0.8412999999999999,
+            0.7895
+          ],
+          "font_pt": 10.0,
+          "axis_ranges": {
+            "x": [
+              0.0,
+              120.0
+            ],
+            "y": [
+              0.0,
+              2.0
+            ]
+          },
+          "visible_label_sides": [
+            1,
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "native_text_objects": 3,
+      "compact_page": {
+        "page_before_inches": [
+          5.395,
+          4.095
+        ],
+        "page_after_inches": [
+          4.264650803461063,
+          3.0096585365853654
+        ],
+        "crop_bbox_pixels": [
+          433,
+          286,
+          2991,
+          2094
+        ],
+        "font_sizes_preserved": true,
+        "physical_frame_tolerance_inches": 0.0025
+      },
+      "export_qa": {
+        "png_size": [
+          2558,
+          1805
+        ],
+        "content_bbox": [
+          36,
+          37,
+          2522,
+          1770
+        ],
+        "margins_pixels": [
+          36,
+          37,
+          36,
+          35
+        ],
+        "dpi_requested": 600,
+        "needs_visual_inspection": true,
+        "pdf_pages": 1,
+        "pdf_images": 0,
+        "pdf_vector_paths": 1921,
+        "pdf_page_inches": [
+          4.263888888888889,
+          3.013888888888889
+        ]
+      },
+      "exports": {
+        "png": {
+          "path": "07_historical_recovery_deviation.png",
+          "sha256": "0c073bfd19479de6c93d2dc19207f3086f4f2470f70dc86d5c585955a3b1156d"
+        },
+        "pdf": {
+          "path": "07_historical_recovery_deviation.pdf",
+          "sha256": "51305bd89e98400fd0b08ef28a9f99231a4e2f814b7b079d6569e327ae80ae01"
+        },
+        "emf": {
+          "path": "07_historical_recovery_deviation.emf",
+          "sha256": "b6047e1a4483c256ee29443f162475e9058f685733ab8bf6a1bf3d853549107b"
+        },
+        "opju": {
+          "path": "07_historical_recovery_deviation.opju",
+          "sha256": "77c9e36551c1205c662dc96a1abdd45273f5b51779e5389533d60c476a82a54f"
+        }
+      },
+      "pdf_text_extractable": true,
+      "pdf_font_names": [
+        "ArialMT"
+      ],
+      "pdf_text_sizes_pt": [
+        10.0795
+      ],
+      "pdf_size_mm": [
+        108.303,
+        76.553
+      ],
+      "visual_inspection": "passed: native previews inspected; cell values, chronology, log ticks, legends, annotations, colorbar and margins checked"
+    }
+  ]
+}

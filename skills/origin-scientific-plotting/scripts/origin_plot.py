@@ -29,6 +29,17 @@ def cell_label(value, digits):
         return ''
     return str(int(value)) if value in (0, 1) else f'{value:.{digits}f}'
 
+def colorbar_tick_decimals(low, high):
+    """Keep fractional colorbar steps distinct, including ranges wider than one."""
+    increment = (high - low) / 5
+    ticks = [low + i * increment for i in range(6)]
+    minimum = 1 if high - low <= 1 else 0
+    for digits in range(minimum, 9):
+        if all(math.isclose(round(v, digits), v, rel_tol=0,
+                            abs_tol=abs(increment) * 1e-9) for v in ticks):
+            return digits
+    return 8
+
 def doctor():
     result = {'windows': sys.platform == 'win32', 'python': sys.version.split()[0],
               'modules': {k: importlib.util.find_spec(k) is not None for k in ['numpy', 'win32com', 'PIL', 'pymupdf']},
@@ -387,9 +398,8 @@ class OriginSession:
             if cframe[0] + cframe[2] > .95:
                 raise ValueError('Leave room for the colorbar and its labels')
             xcfg = {'limits': [0, 1], 'label': '', 'scale': 'linear', 'increment': 1, 'decimals': 0}
-            ycfg = {'limits': [lo, hi], 'label': '', 'scale': 'linear', 'increment': (hi - lo) / 4,
-                    'decimals': 1 if (hi - lo) <= 1 else 0}
-            ycfg['increment'] = (hi - lo) / 5
+            ycfg = {'limits': [lo, hi], 'label': '', 'scale': 'linear', 'increment': (hi - lo) / 5,
+                    'decimals': colorbar_tick_decimals(lo, hi)}
             self.style_axes(figure, 2, cframe, xcfg, ycfg, colorbar=True)
             vals = [[lo + (hi - lo) * i / 255] * 2 for i in range(256)]
             self.matrix(figure, 2, vals, lo, hi, [.25, .75, lo, hi], auxiliary=True)
